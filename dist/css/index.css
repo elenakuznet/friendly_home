@@ -110,6 +110,31 @@ h3 {
   background-color: transparent;
 }
 
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue Light"), local("Helvetica-Neue-Light"), url("../fonts/HelveticaNeueCyr-Light.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Light.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue Roman"), local("Helvetica-Neue-Roman"), url("../fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Roman.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("Helvetica Neue Medium"), local("Helvetica-Neue-Medium"), url("../fonts/HelveticaNeueCyr-Medium.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: local("Comfortaa"), local("Comfortaa-Regular"), url("../fonts/Comfortaa-Regular.woff2") format("woff2"), url("../fonts/Comfortaa-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
 .header {
   position: relative;
 }
@@ -194,7 +219,7 @@ h3 {
 .triangle {
   width: 52px;
   height: 30px;
-  background-image: url("../image/menu/Polygon.svg");
+  background-image: url("../img/menu/Polygon.svg");
   position: absolute;
   top: -27px;
   left: 0;
@@ -341,6 +366,40 @@ h3 {
 
 .project__wrapper {
   grid-area: one;
+}
+
+.content__title {
+  font-weight: 550;
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 15px;
+}
+
+.content__text {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.content__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 550;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FF8A00;
+}
+
+.content__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .friends {
@@ -843,6 +902,45 @@ h3 {
   -ms-flex-item-align: end;
   align-self: flex-end;
   border: 0;
+}
+
+.footer {
+  background-color: #282626;
+  padding: 90px 0;
+}
+
+.footer__info {
+  color: #ffffff;
+}
+
+.footer__list {
+  color: #ffffff;
+}
+
+.footer__subtitle {
+  font-weight: 550;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.social__link {
+  color: #ff8a00;
+}
+
+.social__link:hover {
+  color: #F4972A;
+}
+
+.social__link:focus {
+  color: #F4972A;
+}
+
+.map {
+  height: auto;
+  width: 100%;
+  width: 680px;
+  height: 360px;
 }
 
 @media (max-width: 1100px) {

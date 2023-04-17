@@ -4680,6 +4680,32 @@ menuOverlay.click(function (event) {
 menuLink.click(function () {
   closeBurger();
 });
+
+// Карта
+
+ymaps.ready(init);
+function init() {
+  const myMap = new ymaps.Map("map", {
+    center: [55.848968, 37.376054],
+    zoom: 17
+  });
+  const mark = new ymaps.Placemark([55.848968, 37.376054], {
+    hintContent: 'Friendly House - приют для животных'
+  }, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/footer/Vector.svg',
+    iconImageSize: [39, 59],
+    iconImageOffset: [-20, -59]
+  });
+  myMap.geoObjects.add(mark);
+  myMap.behaviors.disable('drag');
+  myMap.controls.remove('geolocationControl');
+  myMap.controls.remove('searchControl');
+  myMap.controls.remove('trafficControl');
+  myMap.controls.remove('typeSelector');
+  // myMap.controls.remove('fullscreenControl');
+  // myMap.controls.remove('zoomControl');
+}
 }();
 /******/ })()
 ;

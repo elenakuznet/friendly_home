@@ -30,6 +30,36 @@
     }
 }
 
+.content {
+    &__title {
+    font-weight: 550;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 15px;
+    }
+    &__text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    }
+    &__link {
+        display: flex;
+        gap: 15px; 
+        align-items: center;
+        font-weight: 550;
+        font-size: 20px;
+        line-height: 26px;
+        color: #FF8A00;
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+    }
+}
+
+
 .friends {
     grid-area: two;
     /* width: 380px;
