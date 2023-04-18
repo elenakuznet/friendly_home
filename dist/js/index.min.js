@@ -4595,6 +4595,87 @@ const burgerBtn = $('.header__button');
 const menuOverlay = $('.menu__overlay');
 const menu = $('.menu');
 const menuLink = $('.menu__link');
+const modal = $('.modal');
+const modalMain = $('.modal__main');
+const openBtn = $('.modal__open');
+const closeBtn = $('.modal__close');
+
+// modal open
+
+openBtn.click(function () {
+  modal.fadeIn(100, function () {
+    modalMain.show(200);
+  });
+});
+
+// modal close
+
+function closeModal() {
+  modalMain.hide(200, function () {
+    modal.fadeOut(100);
+  });
+}
+;
+
+//click on button 
+
+closeBtn.click(closeModal);
+
+// click on overlay
+
+$('.modal').click(function (event) {
+  if (event.target === this) {
+    closeModal();
+  }
+});
+function closeBurger() {
+  menu.hide(200, function () {
+    menuOverlay.hide(100, function () {
+      // removeInnert(menu.get(0));
+    });
+  });
+}
+burgerBtn.click(function () {
+  menuOverlay.show(100, function () {
+    menu.show(200, function () {
+      // addInnert(menu.get(0));
+    });
+  });
+});
+menuOverlay.click(function (event) {
+  if (event.target === this) {
+    closeBurger();
+  }
+});
+menuLink.click(function () {
+  closeBurger();
+});
+
+// Карта
+
+ymaps.ready(init);
+function init() {
+  const myMap = new ymaps.Map("map", {
+    center: [55.848968, 37.376054],
+    zoom: 17
+  });
+  const mark = new ymaps.Placemark([55.848968, 37.376054], {
+    hintContent: 'Friendly House - приют для животных'
+  }, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/footer/Vector.svg',
+    iconImageSize: [39, 59],
+    iconImageOffset: [-20, -59]
+  });
+  myMap.geoObjects.add(mark);
+  myMap.behaviors.disable('drag');
+  myMap.controls.remove('geolocationControl');
+  myMap.controls.remove('searchControl');
+  myMap.controls.remove('trafficControl');
+  myMap.controls.remove('typeSelector');
+  // myMap.controls.remove('fullscreenControl');
+  // myMap.controls.remove('zoomControl');
+}
 
 // //!--innert 
 // let prevActiveElement;
@@ -4657,55 +4738,6 @@ const menuLink = $('.menu__link');
 //         esc: closeBurger
 //     }
 // ]);
-
-function closeBurger() {
-  menu.hide(200, function () {
-    menuOverlay.hide(100, function () {
-      // removeInnert(menu.get(0));
-    });
-  });
-}
-burgerBtn.click(function () {
-  menuOverlay.show(100, function () {
-    menu.show(200, function () {
-      // addInnert(menu.get(0));
-    });
-  });
-});
-menuOverlay.click(function (event) {
-  if (event.target === this) {
-    closeBurger();
-  }
-});
-menuLink.click(function () {
-  closeBurger();
-});
-
-// Карта
-
-ymaps.ready(init);
-function init() {
-  const myMap = new ymaps.Map("map", {
-    center: [55.848968, 37.376054],
-    zoom: 17
-  });
-  const mark = new ymaps.Placemark([55.848968, 37.376054], {
-    hintContent: 'Friendly House - приют для животных'
-  }, {
-    iconLayout: 'default#image',
-    iconImageHref: 'img/footer/Vector.svg',
-    iconImageSize: [39, 59],
-    iconImageOffset: [-20, -59]
-  });
-  myMap.geoObjects.add(mark);
-  myMap.behaviors.disable('drag');
-  myMap.controls.remove('geolocationControl');
-  myMap.controls.remove('searchControl');
-  myMap.controls.remove('trafficControl');
-  myMap.controls.remove('typeSelector');
-  // myMap.controls.remove('fullscreenControl');
-  // myMap.controls.remove('zoomControl');
-}
 }();
 /******/ })()
 ;

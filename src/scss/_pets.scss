@@ -91,4 +91,7 @@
 .parrots {
     display: flex;
     flex-direction: column;
+    &__picture {
+        height: 140px;
+    }
 }
