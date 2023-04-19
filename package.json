@@ -1,5 +1,5 @@
 {
-  "name": "template-gulp",
+  "name": "friendly_home",
   "version": "1.0.0",
   "description": "Описание",
   "scripts": {
@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
 
-  "homepage": "",
+  "homepage": "https://elenakuznet.github.io/friendly_home/dist/",
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
