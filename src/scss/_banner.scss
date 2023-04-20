@@ -3,15 +3,17 @@
     padding-bottom: 90px;
     &__wrapper {
         display: grid;
+        grid-template-columns: 33% 33% 33%;
         grid-template-areas: 
-        'one two'
-        'three two';
-        justify-content: end;
+        'one three four'
+        'two three four';
+        // justify-content: end;
         align-items: end;
     }
     &__content {
         max-width: 480px;
         grid-area: one;
+        z-index: 10;
     }
     &__text {
         font-weight: 400;
@@ -20,14 +22,89 @@
     }
     &__link {
         justify-self: left;
-        grid-area: three;
+        grid-area: two;
         background-color: transparent;
     }
     &__image {
-        grid-area: two;
+        width: 580px;
+        height: 580px;
+        grid-area: three;
+        background-position: center;
+        background-repeat: no-repeat;
+        justify-self: center;
+        &--sara {
+            background-image: url(('../img/banner/sara_bg.png'));
+        }
+        &--boris {
+            background-image: url('../img/banner/boris_bg.png');
+        }
+        &--lui {
+            background-image: url('../img/banner/lui_bg.png');
+        }
+        &--piter {
+            background-image: url('../img/banner/piter_bg.png');
+        }
+        &--kenny {
+            background-image: url('../img/banner/kenny_bg.png');
+        }
+    }
+    &__list {
+        grid-area: four;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        align-self: center;
+    }
+    &__choose {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        width: 180px;
+        border: 0;
+        background: transparent;
     }
 }
 
 .orange {
     color: $orange;
+    white-space: nowrap;
+}
+
+.boris {
+    display: none;
+}
+
+.lui {
+    display: none;
+}
+
+.piter {
+    display: none;
+}
+
+.kenny {
+    display: none;
+}
+
+.hidden {
+    display: block;
+}
+
+
+.tabs__content {
+    display: none; /* по умолчанию прячем все блоки */
+}
+
+.tabs__content.active {
+    display: block; /* по умолчанию показываем нужный блок */
+}
+
+.tabs__image {
+    display: none;
+}
+
+.tabs__image.active {
+    display: block;
 }

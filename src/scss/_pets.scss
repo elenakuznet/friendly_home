@@ -5,6 +5,54 @@
     }
 }
 
+.pets__grid {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.pets__swiper {
+    display: none;
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
+
+.pinki-slide {
+    max-width: 540px;
+    max-height: 368px;
+}
+
+.murzik-slide {
+    max-width: 459px;
+    max-height: 368px;
+}
+
+.misha-richard-slide {
+    max-width: 280px;
+    max-height: 368px;
+}
+
+.jack-slide {
+    max-width: 394px;
+    max-height: 368px;
+}
+
+.jerry-slide {
+    max-width: 295px;
+    max-height: 368px;
+}
+
+.rokky-slide {
+    width: 237px;
+    height: 184px;
+}
+
+.senya-slide {
+    width: 237px;
+    height: 184px;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(12, 1fr);

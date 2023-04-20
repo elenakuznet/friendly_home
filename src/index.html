@@ -15,6 +15,12 @@
     <link rel="preload" href="fonts/Comfortaa-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Comfortaa-Regular.woff" as="font" type="font/woff" crossorigin>
     <link rel="stylesheet" href="css/index.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- <script>
         document.addEventListener('DOMContentLoaded', () => {
             const createLink = url => {
@@ -67,24 +73,49 @@
         <h1 class="visually-hidden">Приют "Friendly House"</h1>
         <section class="section banner">
             <div class="container">
-                <div class="banner__wrapper">
-                    <div class="banner__content">
-                        <h2 class="banner__text"><span class="orange">Сара ждёт,</span> когда найдётся 
-                            её человек</h2>
+                <div class="sara choose">
+                    <div class="banner__wrapper tabs">
+                        <div class="banner__content tabs__content active">
+                            <h2 class="banner__text"><span class="orange">Сара ждёт,</span> когда найдётся 
+                                её человек</h2>
+                        </div>
+                        <div class="banner__content tabs__content">
+                            <h2 class="banner__text"><span class="orange">Борис ждёт,</span> когда найдётся 
+                                её человек</h2>
+                        </div>
+                        <div class="banner__content tabs__content">
+                            <h2 class="banner__text"><span class="orange">Луи ждёт,</span> когда найдётся 
+                                её человек</h2>
+                        </div>
+
+                        <div class="banner__content tabs__content">
+                            <h2 class="banner__text"><span class="orange">Питер  ждёт,</span> когда найдётся 
+                                её человек</h2>
+                        </div>
+                        <div class="banner__content tabs__content">
+                            <h2 class="banner__text"><span class="orange">Кенни  ждёт,</span> когда найдётся 
+                                её человек</h2>
+                        </div>
+
+
+                        <button class="banner__link button modal__open" aria-label="жми на лапку чтобы помочь">
+                            <img loading="lazy" src="img/banner/banner_link.svg" alt="кнопка в виде лапки" width="180" height="155">
+                        </button>
+                        <div class="banner__image banner__image--sara tabs__image active"></div>
+                        <div class="banner__image banner__image--boris tabs__image"></div>
+                        <div class="banner__image banner__image--lui tabs__image"></div>
+                        <div class="banner__image banner__image--piter tabs__image"></div>
+                        <div class="banner__image banner__image--kenny tabs__image"></div>
+                        <ul class="banner__list tabs__caption">
+                            <li class="banner__item"><button class="banner__choose sara__button"><img src="img/banner/sara.png" alt=""><p>Сара</p></button></li>
+                            <li class="banner__item"><button class="banner__choose boris__button"><img src="img/banner/boris.png" alt=""><p>Борис</p></button></li>
+                            <li class="banner__item"><button class="banner__choose lui__button"><img src="img/banner/lui.png" alt=""><p>Луи</p></button></li>
+                            <li class="banner__item"><button class="banner__choose piter__button"><img src="img/banner/piter.png" alt=""><p>Питер</p></button></li>
+                            <li class="banner__item"><button class="banner__choose kenny__button"><img src="img/banner/kenny.png" alt=""><p>Кенни</p></button></li>
+                        </ul>
                     </div>
-                    <button class="banner__link button modal__open" aria-label="жми на лапку чтобы помочь">
-                        <img loading="lazy" src="img/banner/banner_link.svg" alt="кнопка в виде лапки" width="180" height="155">
-                    </button>
-                    <picture class="banner__image">
-                        <source media="(max-width: 460px)" srcset="image/banner/sara-mob.avif" type="image/avif">
-                        <source media="(max-width: 460px)" srcset="image/banner/sara-mob.webp" type="image/webp">
-                        <source media="(max-width: 460px)" srcset="image/banner/sara-mob.jpg" type="image/jpg">
-                        <source srcset="img/banner/sara.avif" type="image/avif">
-                        <source srcset="img/banner/sara.webp" type="image/webp">
-                        <img loading="lazy" src="img/banner/sara.jpg" alt="Фото собаки" width="580" height="580">
-                    </picture>
-                    
                 </div>
+
             </div>
         </section>
 
@@ -392,70 +423,156 @@
         <section class="pets section">
             <div class="container">
                 <h2 class="pets__title section__title">Наши питомцы</h2>
-                <div class="gallery">
-                    <figure class="gallery__figure one">
-                        <picture>
-                            <source srcset="img/pets/pinki.avif" type="image/avif">
-                            <source srcset="img/pets/pinki.webp" type="image/webp">
-                            <img class="gallery__image pinki" src="img/pets/pinki.jpg" alt="Твинки и Пинки" width="480" height="280">
-                        </picture>
-                        
-                        <figcaption class="gallery__caption">Твинки и Пинки, 2 месяца</figcaption>
-                    </figure>
-
-                    <figure class="gallery__figure two">
-                        <picture>
-                            <source srcset="img/pets/murzik-1.avif" type="image/avif">
-                            <source srcset="img/pets/murzik-1.webp" type="image/webp">
-                            <img loading="lazy" class="gallery__image murzik" src="img/pets/murzik-1.jpg" alt="Мурзик" width="280" height="280">
-                        </picture>
-                        
-                        <figcaption class="gallery__caption">Мурзик, 6 месяцев</figcaption>
-                    </figure>
-
-                    <figure class="gallery__figure three">
-                        <picture>
-                            <source srcset="img/pets/jack.avif" type="image/avif">
-                            <source srcset="img/pets/jack.webp" type="image/webp">
-                            <img loading="lazy" class="gallery__image jack" src="img/pets/jack.jpg" alt="Джек" width="280" height="280">
-                        </picture>
-                        <figcaption class="gallery__caption">Джек, 1 год</figcaption>
-                    </figure>
-
-                    <figure class="gallery__figure four">
-                        <picture>
-                            <source srcset="img/pets/jerry-1.avif" type="image/avif">
-                            <source srcset="img/pets/jerry-1.webp" type="image/webp">
-                            <img loading="lazy" class="gallery__image jerry" src="img/pets/jerry-1.jpg" alt="Джерри" width="280" height="280">
-                        </picture>
-                        <figcaption class="gallery__caption">Джерри, 3 недели</figcaption>
-                    </figure>
-
-                    <figure class="gallery__figure five">
-                        <div class="parrots">
-                            <picture class="parrots__picture">
-                                <source srcset="img/pets/rokky.avif" type="image/avif">
-                                <source srcset="img/pets/rokky.webp" type="image/webp">
-                                <img loading="lazy" class="gallery__image rokky" src="img/pets/rokky.jpg" alt="Рокки" width="180" height="140">
+                <div class="pets__grid">
+                    <div class="gallery">
+                        <figure class="gallery__figure one swiper-slide">
+                            <picture>
+                                <source srcset="img/pets/pinki.avif" type="image/avif">
+                                <source srcset="img/pets/pinki.webp" type="image/webp">
+                                <img class="gallery__image pinki" src="img/pets/pinki.jpg" alt="Твинки и Пинки" width="480" height="280">
                             </picture>
-                            <picture class="parrots__picture">
-                                <source srcset="img/pets/senya.avif" type="image/avif">
-                                <source srcset="img/pets/senya.webp" type="image/webp">
-                                <img loading="lazy" class="gallery__image senya" src="img/pets/senya.jpg" alt="Сеня" width="180" height="140">  
-                            </picture>
-                        </div>
-                        <figcaption class="gallery__caption">Рокки и Сеня, 2 и 3 года</figcaption>
-                    </figure>
+                            
+                            <figcaption class="gallery__caption">Твинки и Пинки, 2 месяца</figcaption>
+                        </figure>
 
-                    <figure class="gallery__figure six">
-                        <picture>
-                            <source srcset="img/pets/misha_richard.avif" type="image/avif">
-                            <source srcset="img/pets/misha_richard.webp" type="image/webp">
-                            <img loading="lazy" class="gallery__image misha-richard" src="img/pets/misha_richard.jpg" alt="Миша (кот) и Ричард (пёс)">
-                        </picture>
-                        <figcaption class="gallery__caption">Миша (кот) и Ричард (пёс), 3 года и 5 лет</figcaption>
-                    </figure>
+                        <figure class="gallery__figure two">
+                            <picture>
+                                <source srcset="img/pets/murzik-1.avif" type="image/avif">
+                                <source srcset="img/pets/murzik-1.webp" type="image/webp">
+                                <img loading="lazy" class="gallery__image murzik" src="img/pets/murzik-1.jpg" alt="Мурзик" width="280" height="280">
+                            </picture>
+                            
+                            <figcaption class="gallery__caption">Мурзик, 6 месяцев</figcaption>
+                        </figure>
+
+                        <figure class="gallery__figure three">
+                            <picture>
+                                <source srcset="img/pets/jack.avif" type="image/avif">
+                                <source srcset="img/pets/jack.webp" type="image/webp">
+                                <img loading="lazy" class="gallery__image jack" src="img/pets/jack.jpg" alt="Джек" width="280" height="280">
+                            </picture>
+                            <figcaption class="gallery__caption">Джек, 1 год</figcaption>
+                        </figure>
+
+                        <figure class="gallery__figure four swiper-slide">
+                            <picture>
+                                <source srcset="img/pets/jerry-1.avif" type="image/avif">
+                                <source srcset="img/pets/jerry-1.webp" type="image/webp">
+                                <img loading="lazy" class="gallery__image jerry" src="img/pets/jerry-1.jpg" alt="Джерри" width="280" height="280">
+                            </picture>
+                            <figcaption class="gallery__caption">Джерри, 3 недели</figcaption>
+                        </figure>
+
+                        <figure class="gallery__figure five">
+                            <div class="parrots">
+                                <picture class="parrots__picture">
+                                    <source srcset="img/pets/rokky.avif" type="image/avif">
+                                    <source srcset="img/pets/rokky.webp" type="image/webp">
+                                    <img loading="lazy" class="gallery__image rokky" src="img/pets/rokky.jpg" alt="Рокки" width="180" height="140">
+                                </picture>
+                                <picture class="parrots__picture">
+                                    <source srcset="img/pets/senya.avif" type="image/avif">
+                                    <source srcset="img/pets/senya.webp" type="image/webp">
+                                    <img loading="lazy" class="gallery__image senya" src="img/pets/senya.jpg" alt="Сеня" width="180" height="140">  
+                                </picture>
+                            </div>
+                            <figcaption class="gallery__caption">Рокки и Сеня, 2 и 3 года</figcaption>
+                        </figure>
+
+                        <figure class="gallery__figure six">
+                            <picture>
+                                <source srcset="img/pets/misha_richard.avif" type="image/avif">
+                                <source srcset="img/pets/misha_richard.webp" type="image/webp">
+                                <img loading="lazy" class="gallery__image misha-richard" src="img/pets/misha_richard.jpg" alt="Миша (кот) и Ричард (пёс)">
+                            </picture>
+                            <figcaption class="gallery__caption">Миша (кот) и Ричард (пёс), 3 года и 5 лет</figcaption>
+                        </figure>
+                    </div>
                 </div>
+
+                <div class="pets__swiper">
+                    <div class="swiper">
+                        <div class="gallery swiper-wrapper">
+                            <figure class="gallery__figure one swiper-slide">
+                                <picture>
+                                    <source srcset="img/pets/pinki.avif" type="image/avif">
+                                    <source srcset="img/pets/pinki.webp" type="image/webp">
+                                    <img class="gallery__image pinki-slide" src="img/pets/pinki.jpg" alt="Твинки и Пинки" width="480" height="280">
+                                </picture>
+                                
+                                <figcaption class="gallery__caption">Твинки и Пинки, 2 месяца</figcaption>
+                            </figure>
+
+                            <figure class="gallery__figure two swiper-slide">
+                                <picture>
+                                    <source srcset="img/pets/murzik-1.avif" type="image/avif">
+                                    <source srcset="img/pets/murzik-1.webp" type="image/webp">
+                                    <img loading="lazy" class="gallery__image murzik-slide" src="img/pets/murzik-1.jpg" alt="Мурзик" width="280" height="280">
+                                </picture>
+                                
+                                <figcaption class="gallery__caption">Мурзик, 6 месяцев</figcaption>
+                            </figure>
+
+                            <figure class="gallery__figure six swiper-slide">
+                                <picture>
+                                    <source srcset="img/pets/misha_richard.avif" type="image/avif">
+                                    <source srcset="img/pets/misha_richard.webp" type="image/webp">
+                                    <img loading="lazy" class="gallery__image misha-richard-slide" src="img/pets/misha_richard.jpg" alt="Миша (кот) и Ричард (пёс)">
+                                </picture>
+                                <figcaption class="gallery__caption">Миша (кот) и Ричард (пёс), 3 года и 5 лет</figcaption>
+                            </figure>
+
+                            <figure class="gallery__figure three swiper-slide">
+                                <picture>
+                                    <source srcset="img/pets/jack.avif" type="image/avif">
+                                    <source srcset="img/pets/jack.webp" type="image/webp">
+                                    <img loading="lazy" class="gallery__image jack-slide" src="img/pets/jack.jpg" alt="Джек" width="280" height="280">
+                                </picture>
+                                <figcaption class="gallery__caption">Джек, 1 год</figcaption>
+                            </figure>
+
+                            <figure class="gallery__figure four swiper-slide">
+                                <picture>
+                                    <source srcset="img/pets/jerry-1.avif" type="image/avif">
+                                    <source srcset="img/pets/jerry-1.webp" type="image/webp">
+                                    <img loading="lazy" class="gallery__image jerry-slide" src="img/pets/jerry-1.jpg" alt="Джерри" width="280" height="280">
+                                </picture>
+                                <figcaption class="gallery__caption">Джерри, 3 недели</figcaption>
+                            </figure>
+
+                            <figure class="gallery__figure five swiper-slide">
+                                <div class="parrots">
+                                    <picture class="parrots__picture">
+                                        <source srcset="img/pets/rokky.avif" type="image/avif">
+                                        <source srcset="img/pets/rokky.webp" type="image/webp">
+                                        <img loading="lazy" class=" rokky-slide" src="img/pets/rokky.jpg" alt="Рокки" width="180" height="140">
+                                    </picture>
+                                    <picture class="parrots__picture">
+                                        <source srcset="img/pets/senya.avif" type="image/avif">
+                                        <source srcset="img/pets/senya.webp" type="image/webp">
+                                        <img loading="lazy" class="senya-slide" src="img/pets/senya.jpg" alt="Сеня" width="180" height="140">  
+                                    </picture>
+                                </div>
+                                <figcaption class="gallery__caption">Рокки и Сеня, 2 и 3 года</figcaption>
+                            </figure>
+
+                        </div>
+                        <div class="button-left">
+                            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="27" cy="27" r="27" transform="matrix(-1 0 0 1 54 0)" fill="#FF8A00"/>
+                                <path d="M31.7075 17.7421C31.8697 17.904 31.9984 18.0963 32.0862 18.308C32.174 18.5197 32.2192 18.7467 32.2192 18.9759C32.2192 19.2051 32.174 19.432 32.0862 19.6437C31.9984 19.8554 31.8697 20.0477 31.7075 20.2096L24.9175 26.9996L31.7075 33.7896C32.0347 34.1168 32.2185 34.5606 32.2185 35.0234C32.2185 35.4861 32.0347 35.9299 31.7075 36.2571C31.3802 36.5843 30.9365 36.7681 30.4737 36.7681C30.011 36.7681 29.5672 36.5843 29.24 36.2571L21.2075 28.2246C21.0452 28.0627 20.9165 27.8704 20.8287 27.6587C20.7409 27.447 20.6957 27.2201 20.6957 26.9909C20.6957 26.7617 20.7409 26.5347 20.8287 26.323C20.9165 26.1113 21.0452 25.919 21.2075 25.7571L29.24 17.7246C29.905 17.0596 31.025 17.0596 31.7075 17.7421Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="button-right">
+                            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="27" cy="27" r="27" fill="#FF8A00"/>
+                                <path d="M22.2925 17.7421C22.1303 17.904 22.0016 18.0963 21.9138 18.308C21.826 18.5197 21.7808 18.7467 21.7808 18.9759C21.7808 19.2051 21.826 19.432 21.9138 19.6437C22.0016 19.8554 22.1303 20.0477 22.2925 20.2096L29.0825 26.9996L22.2925 33.7896C21.9653 34.1168 21.7815 34.5606 21.7815 35.0234C21.7815 35.4861 21.9653 35.9299 22.2925 36.2571C22.6198 36.5843 23.0635 36.7681 23.5263 36.7681C23.989 36.7681 24.4328 36.5843 24.76 36.2571L32.7925 28.2246C32.9548 28.0627 33.0835 27.8704 33.1713 27.6587C33.2591 27.447 33.3043 27.2201 33.3043 26.9909C33.3043 26.7617 33.2591 26.5347 33.1713 26.323C33.0835 26.1113 32.9548 25.919 32.7925 25.7571L24.76 17.7246C24.095 17.0596 22.975 17.0596 22.2925 17.7421Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                
             </div>
         </section> 
         <section class="contact" id="contact">
