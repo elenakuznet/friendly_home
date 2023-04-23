@@ -13,8 +13,46 @@
 
 .pets__swiper {
     display: none;
+    position: relative;
     @media (max-width: 768px) {
         display: block;
+    }
+}
+
+.swiper {
+    max-width: 540px;
+    height: 410px;
+    text-align: center;
+    @media (max-width: 480px) {
+        max-width: 270px;
+        height: 214px;
+    }
+}
+
+.button-left,
+.button-right {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    top: calc(50% - 27px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.button-right {
+    right: 0;
+    @media (max-width: 480px) {
+        right: -27px;
+    }
+}
+
+.button-left {
+    left: 0;
+    @media (max-width: 480px) {
+        left: -27px;
     }
 }
 

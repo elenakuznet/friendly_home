@@ -141,27 +141,6 @@ menuLink.click(function() {
 // Слайдер 
 
 
-    // if (window.innerWidth <= 768) {
-    //     new Swiper('.swiper', {
-    //             slidesPerView: 1,
-    //             loop: true,
-            
-    //             pagination: {
-    //                 el: '.swiper-pagination',
-    //             },
-            
-    //             navigation: {
-    //                 nextEl: '.swiper-button-next',
-    //                 prevEl: '.swiper-button-prev',
-    //             },
-            
-    //             scrollbar: {
-    //                 el: '.swiper-scrollbar',
-    //             },
-    //         });
-    // } 
-
-
 new Swiper('.swiper', {
     slidesPerView: 1,
         // spaceBetween: 20,
@@ -196,6 +175,21 @@ new Swiper('.swiper', {
     });
     
 
+
+    const carousel = new Swiper('.carousel', {
+        direction: 'horizontal',
+        slidesPerView: 1.5,
+        // spaceBetween: 20,
+        loop: true,
+        // centeredSlides: true,
+    });
+
+    const carousel2 = new Swiper('.carousel2', {
+        direction: 'horizontal',
+        slidesPerView: 1.5,
+        loop: true,
+        // centeredSlides: true,
+    })
 
 // Карта
 

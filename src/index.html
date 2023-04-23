@@ -45,7 +45,12 @@
         <div class="container">
             <div class="header__wrapper">
                 <button class="header__button button" aria-haspopup="menu" aria-label="Открыть меню">
-                    <img class="header__burger" src="img/header/menu.svg" alt="кнопка открыть меню" width="41" height="21">
+                    <!-- <img class="header__burger" src="img/header/menu.svg" alt="кнопка открыть меню" width="41" height="21"> -->
+                    <svg class="header__burger" width="40" height="21" viewBox="0 0 40 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="3" rx="1" fill="currentColor"/>
+                        <rect y="9" width="40" height="3" rx="1" fill="currentColor"/>
+                        <rect y="18" width="29" height="3" rx="1" fill="currentColor"/>
+                    </svg>                        
                 </button>
                         <div class="menu__overlay"></div>
                         <div class="menu">
@@ -76,24 +81,24 @@
                 <div class="sara choose">
                     <div class="banner__wrapper tabs">
                         <div class="banner__content tabs__content active">
-                            <h2 class="banner__text"><span class="orange">Сара ждёт,</span> когда найдётся 
+                            <h2 class="banner__text"><span class="banner__text banner__text--orange">Сара ждёт,</span> когда найдётся 
                                 её человек</h2>
                         </div>
                         <div class="banner__content tabs__content">
-                            <h2 class="banner__text"><span class="orange">Борис ждёт,</span> когда найдётся 
+                            <h2 class="banner__text"><span class="banner__text banner__text--orange">Борис ждёт,</span> когда найдётся 
                                 её человек</h2>
                         </div>
                         <div class="banner__content tabs__content">
-                            <h2 class="banner__text"><span class="orange">Луи ждёт,</span> когда найдётся 
+                            <h2 class="banner__text"><span class="banner__text banner__text--orange">Луи ждёт,</span> когда найдётся 
                                 её человек</h2>
                         </div>
 
                         <div class="banner__content tabs__content">
-                            <h2 class="banner__text"><span class="orange">Питер  ждёт,</span> когда найдётся 
+                            <h2 class="banner__text"><span class="banner__text banner__text--orange">Питер  ждёт,</span> когда найдётся 
                                 её человек</h2>
                         </div>
                         <div class="banner__content tabs__content">
-                            <h2 class="banner__text"><span class="orange">Кенни  ждёт,</span> когда найдётся 
+                            <h2 class="banner__text"><span class="banner__text banner__text--orange">Кенни  ждёт,</span> когда найдётся 
                                 её человек</h2>
                         </div>
 
@@ -107,11 +112,15 @@
                         <div class="banner__image banner__image--piter tabs__image"></div>
                         <div class="banner__image banner__image--kenny tabs__image"></div>
                         <ul class="banner__list tabs__caption">
-                            <li class="banner__item"><button class="banner__choose sara__button"><img src="img/banner/sara.png" alt=""><p>Сара</p></button></li>
-                            <li class="banner__item"><button class="banner__choose boris__button"><img src="img/banner/boris.png" alt=""><p>Борис</p></button></li>
-                            <li class="banner__item"><button class="banner__choose lui__button"><img src="img/banner/lui.png" alt=""><p>Луи</p></button></li>
-                            <li class="banner__item"><button class="banner__choose piter__button"><img src="img/banner/piter.png" alt=""><p>Питер</p></button></li>
-                            <li class="banner__item"><button class="banner__choose kenny__button"><img src="img/banner/kenny.png" alt=""><p>Кенни</p></button></li>
+                            <li class="banner__item">
+                                <button class="banner__choose sara__button">
+                                    <img class="banner__img" src="img/banner/sara.png" alt=""><p>Сара</p>
+                                </button>
+                            </li>
+                            <li class="banner__item"><button class="banner__choose boris__button"><img class="banner__img" src="img/banner/boris.png" alt=""><p>Борис</p></button></li>
+                            <li class="banner__item"><button class="banner__choose lui__button"><img class="banner__img" src="img/banner/lui.png" alt=""><p>Луи</p></button></li>
+                            <li class="banner__item"><button class="banner__choose piter__button"><img class="banner__img" src="img/banner/piter.png" alt=""><p>Питер</p></button></li>
+                            <li class="banner__item"><button class="banner__choose kenny__button"><img class="banner__img" src="img/banner/kenny.png" alt=""><p>Кенни</p></button></li>
                         </ul>
                     </div>
                 </div>
@@ -354,19 +363,41 @@
                                 <img  loading="lazy" class="help__image" src="img/help/dog_1.jpg" alt="фото собаки" width="180" height="139">
                             </picture>
                         </div>
+
+                        <div class="help__swiper">
+                            <div class="swiper carousel">
+                                <div class="swiper__wrapper">
+                                    <picture class="help__image--01 swiper-slide">
+                                        <source srcset="img/help/rabit.avif" type="image/avif">
+                                        <source srcset="img/help/rabit.webp" type="image/webp">
+                                        <img loading="lazy" class="help__image " src="img/help/rabit.jpg" alt="фото кролика" width="180" height="139">
+                                    </picture>
+                                    <picture class="help__image--02 swiper-slide">
+                                        <source srcset="img/help/dog_2.avif" type="image/avif">
+                                        <source srcset="img/help/dog_2.webp" type="image/webp">
+                                        <img loading="lazy" class="help__image" src="img/help/dog_2.jpg" alt="фото собаки" width="380" height="298">
+                                    </picture>
+                                    <picture class="help__image--03 swiper-slide">
+                                        <source srcset="img/help/dog_1.avif" type="image/avif">
+                                        <source srcset="img/help/dog_1.webp" type="image/webp">
+                                        <img  loading="lazy" class="help__image" src="img/help/dog_1.jpg" alt="фото собаки" width="180" height="139">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
                         
                     </li>
                     <li class="item second">
                         <h3 class="item__title item__title_second">Стать волонером</h3>
                         <div class="help__row">
                             <div class="help__figure">
-                                <picture class="help__image--03">
+                                <picture>
                                     <source media="(max-width: 460px)" srcset="image/help/vol-mob.avif" type="image/avif">
                                     <source media="(max-width: 460px)" srcset="image/help/vol-mob.webp" type="image/webp">
                                     <source media="(max-width: 460px)" srcset="image/help/vol-mob.jpg" type="image/jpg">
                                     <source srcset="img/help/vol.avif" type="image/avif">
                                     <source srcset="img/help/vol.webp" type="image/webp">
-                                    <img loading="lazy" src="img/help/vol.jpg" alt="фото девушки и собаки" width="580" height="349">
+                                    <img class="volunteer__image" loading="lazy" src="img/help/vol.jpg" alt="фото девушки и собаки" width="580" height="349">
                                 </picture>
                             </div>
                             <div class="second__text">
@@ -412,6 +443,37 @@
                                     <img class="help__image" loading="lazy" src="img/help/guardian_03.jpg" alt="фото парня с собакой" width="280" height="181">
                                 </picture>
                             </div>
+                            <!-- <div class="guardian__swiper">
+                                    <div class="swiper ">
+                                        <div class="swiper__wrapper">
+                                            <picture class="guardian-01">
+                                                <source media="(max-width: 460px)" srcset="image/help/guardian_01-mob.avif" type="image/avif">
+                                                <source media="(max-width: 460px)" srcset="image/help/guardian_01-mob.webp" type="image/webp">
+                                                <source media="(max-width: 460px)" srcset="image/help/guardian_01-mob.jpg" type="image/jpg">
+                                                <source srcset="img/help/guardian_01.avif" type="image/avif">
+                                                <source srcset="img/help/guardian_01.webp" type="image/webp">
+                                                <img class="help__image" loading="lazy" src="img/help/guardian_01.jpg" alt="фото кота" width="280" height="382">
+                                            </picture>
+                                            <picture class="guardian-02">
+                                                <source media="(max-width: 460px)" srcset="image/help/guardian_02-mob.avif" type="image/avif">
+                                                <source media="(max-width: 460px)" srcset="image/help/guardian_02-mob.webp" type="image/webp">
+                                                <source media="(max-width: 460px)" srcset="image/help/guardian_02-mob.jpg" type="image/jpg">
+                                                <source srcset="img/help/guardian_02.avif" type="image/avif">
+                                                <source srcset="img/help/guardian_02.webp" type="image/webp">
+                                                <img class="help__image" loading="lazy" src="img/help/guardian_02.jpg" alt="фото кота" width="280" height="181">
+                                            </picture>
+                                            <picture class="guardian-03">
+                                                <source media="(max-width: 460px)" srcset="image/help/guardian_03-mob.avif" type="image/avif">
+                                                <source media="(max-width: 460px)" srcset="image/help/guardian_03-mob.webp" type="image/webp">
+                                                <source media="(max-width: 460px)" srcset="image/help/guardian_03-mob.jpg" type="image/jpg">
+                                                <source srcset="img/help/guardian_03.avif" type="image/avif">
+                                                <source srcset="img/help/guardian_03.webp" type="image/webp">
+                                                <img class="help__image" loading="lazy" src="img/help/guardian_03.jpg" alt="фото парня с собакой" width="280" height="181">
+                                            </picture>
+                                        </div>
+                                    </div>
+                            </div> -->
+                        
                         </div>
                     </li>
                 </ol>
@@ -425,7 +487,7 @@
                 <h2 class="pets__title section__title">Наши питомцы</h2>
                 <div class="pets__grid">
                     <div class="gallery">
-                        <figure class="gallery__figure one swiper-slide">
+                        <figure class="gallery__figure one">
                             <picture>
                                 <source srcset="img/pets/pinki.avif" type="image/avif">
                                 <source srcset="img/pets/pinki.webp" type="image/webp">
@@ -492,8 +554,8 @@
 
                 <div class="pets__swiper">
                     <div class="swiper">
-                        <div class="gallery swiper-wrapper">
-                            <figure class="gallery__figure one swiper-slide">
+                        <div class="swiper-wrapper">
+                            <figure class="swiper-slide">
                                 <picture>
                                     <source srcset="img/pets/pinki.avif" type="image/avif">
                                     <source srcset="img/pets/pinki.webp" type="image/webp">
@@ -503,7 +565,7 @@
                                 <figcaption class="gallery__caption">Твинки и Пинки, 2 месяца</figcaption>
                             </figure>
 
-                            <figure class="gallery__figure two swiper-slide">
+                            <figure class="swiper-slide">
                                 <picture>
                                     <source srcset="img/pets/murzik-1.avif" type="image/avif">
                                     <source srcset="img/pets/murzik-1.webp" type="image/webp">
@@ -513,7 +575,7 @@
                                 <figcaption class="gallery__caption">Мурзик, 6 месяцев</figcaption>
                             </figure>
 
-                            <figure class="gallery__figure six swiper-slide">
+                            <figure class="swiper-slide">
                                 <picture>
                                     <source srcset="img/pets/misha_richard.avif" type="image/avif">
                                     <source srcset="img/pets/misha_richard.webp" type="image/webp">
@@ -522,7 +584,7 @@
                                 <figcaption class="gallery__caption">Миша (кот) и Ричард (пёс), 3 года и 5 лет</figcaption>
                             </figure>
 
-                            <figure class="gallery__figure three swiper-slide">
+                            <figure class="swiper-slide">
                                 <picture>
                                     <source srcset="img/pets/jack.avif" type="image/avif">
                                     <source srcset="img/pets/jack.webp" type="image/webp">
@@ -531,7 +593,7 @@
                                 <figcaption class="gallery__caption">Джек, 1 год</figcaption>
                             </figure>
 
-                            <figure class="gallery__figure four swiper-slide">
+                            <figure class="swiper-slide">
                                 <picture>
                                     <source srcset="img/pets/jerry-1.avif" type="image/avif">
                                     <source srcset="img/pets/jerry-1.webp" type="image/webp">
@@ -540,14 +602,14 @@
                                 <figcaption class="gallery__caption">Джерри, 3 недели</figcaption>
                             </figure>
 
-                            <figure class="gallery__figure five swiper-slide">
+                            <figure class="swiper-slide">
                                 <div class="parrots">
-                                    <picture class="parrots__picture">
+                                    <picture>
                                         <source srcset="img/pets/rokky.avif" type="image/avif">
                                         <source srcset="img/pets/rokky.webp" type="image/webp">
                                         <img loading="lazy" class=" rokky-slide" src="img/pets/rokky.jpg" alt="Рокки" width="180" height="140">
                                     </picture>
-                                    <picture class="parrots__picture">
+                                    <picture>
                                         <source srcset="img/pets/senya.avif" type="image/avif">
                                         <source srcset="img/pets/senya.webp" type="image/webp">
                                         <img loading="lazy" class="senya-slide" src="img/pets/senya.jpg" alt="Сеня" width="180" height="140">  
@@ -555,20 +617,20 @@
                                 </div>
                                 <figcaption class="gallery__caption">Рокки и Сеня, 2 и 3 года</figcaption>
                             </figure>
-
                         </div>
-                        <div class="button-left">
-                            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="27" cy="27" r="27" transform="matrix(-1 0 0 1 54 0)" fill="#FF8A00"/>
-                                <path d="M31.7075 17.7421C31.8697 17.904 31.9984 18.0963 32.0862 18.308C32.174 18.5197 32.2192 18.7467 32.2192 18.9759C32.2192 19.2051 32.174 19.432 32.0862 19.6437C31.9984 19.8554 31.8697 20.0477 31.7075 20.2096L24.9175 26.9996L31.7075 33.7896C32.0347 34.1168 32.2185 34.5606 32.2185 35.0234C32.2185 35.4861 32.0347 35.9299 31.7075 36.2571C31.3802 36.5843 30.9365 36.7681 30.4737 36.7681C30.011 36.7681 29.5672 36.5843 29.24 36.2571L21.2075 28.2246C21.0452 28.0627 20.9165 27.8704 20.8287 27.6587C20.7409 27.447 20.6957 27.2201 20.6957 26.9909C20.6957 26.7617 20.7409 26.5347 20.8287 26.323C20.9165 26.1113 21.0452 25.919 21.2075 25.7571L29.24 17.7246C29.905 17.0596 31.025 17.0596 31.7075 17.7421Z" fill="white"/>
-                            </svg>
-                        </div>
-                        <div class="button-right">
-                            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="27" cy="27" r="27" fill="#FF8A00"/>
-                                <path d="M22.2925 17.7421C22.1303 17.904 22.0016 18.0963 21.9138 18.308C21.826 18.5197 21.7808 18.7467 21.7808 18.9759C21.7808 19.2051 21.826 19.432 21.9138 19.6437C22.0016 19.8554 22.1303 20.0477 22.2925 20.2096L29.0825 26.9996L22.2925 33.7896C21.9653 34.1168 21.7815 34.5606 21.7815 35.0234C21.7815 35.4861 21.9653 35.9299 22.2925 36.2571C22.6198 36.5843 23.0635 36.7681 23.5263 36.7681C23.989 36.7681 24.4328 36.5843 24.76 36.2571L32.7925 28.2246C32.9548 28.0627 33.0835 27.8704 33.1713 27.6587C33.2591 27.447 33.3043 27.2201 33.3043 26.9909C33.3043 26.7617 33.2591 26.5347 33.1713 26.323C33.0835 26.1113 32.9548 25.919 32.7925 25.7571L24.76 17.7246C24.095 17.0596 22.975 17.0596 22.2925 17.7421Z" fill="white"/>
-                            </svg>
-                        </div>
+                        
+                    </div>
+                    <div class="button-left">
+                        <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="27" cy="27" r="27" transform="matrix(-1 0 0 1 54 0)" fill="#FF8A00"/>
+                            <path d="M31.7075 17.7421C31.8697 17.904 31.9984 18.0963 32.0862 18.308C32.174 18.5197 32.2192 18.7467 32.2192 18.9759C32.2192 19.2051 32.174 19.432 32.0862 19.6437C31.9984 19.8554 31.8697 20.0477 31.7075 20.2096L24.9175 26.9996L31.7075 33.7896C32.0347 34.1168 32.2185 34.5606 32.2185 35.0234C32.2185 35.4861 32.0347 35.9299 31.7075 36.2571C31.3802 36.5843 30.9365 36.7681 30.4737 36.7681C30.011 36.7681 29.5672 36.5843 29.24 36.2571L21.2075 28.2246C21.0452 28.0627 20.9165 27.8704 20.8287 27.6587C20.7409 27.447 20.6957 27.2201 20.6957 26.9909C20.6957 26.7617 20.7409 26.5347 20.8287 26.323C20.9165 26.1113 21.0452 25.919 21.2075 25.7571L29.24 17.7246C29.905 17.0596 31.025 17.0596 31.7075 17.7421Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="button-right">
+                        <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="27" cy="27" r="27" fill="#FF8A00"/>
+                            <path d="M22.2925 17.7421C22.1303 17.904 22.0016 18.0963 21.9138 18.308C21.826 18.5197 21.7808 18.7467 21.7808 18.9759C21.7808 19.2051 21.826 19.432 21.9138 19.6437C22.0016 19.8554 22.1303 20.0477 22.2925 20.2096L29.0825 26.9996L22.2925 33.7896C21.9653 34.1168 21.7815 34.5606 21.7815 35.0234C21.7815 35.4861 21.9653 35.9299 22.2925 36.2571C22.6198 36.5843 23.0635 36.7681 23.5263 36.7681C23.989 36.7681 24.4328 36.5843 24.76 36.2571L32.7925 28.2246C32.9548 28.0627 33.0835 27.8704 33.1713 27.6587C33.2591 27.447 33.3043 27.2201 33.3043 26.9909C33.3043 26.7617 33.2591 26.5347 33.1713 26.323C33.0835 26.1113 32.9548 25.919 32.7925 25.7571L24.76 17.7246C24.095 17.0596 22.975 17.0596 22.2925 17.7421Z" fill="white"/>
+                        </svg>
                     </div>
                 </div>
                 
@@ -576,7 +638,8 @@
             </div>
         </section> 
         <section class="contact" id="contact">
-            <div class="contact__container contact__wrapper">
+            <div class="container">
+                <div class="contact__container contact__wrapper">
                 <h2 class="contact__title">Ты можешь помочь нам!</h2>
                 <p class="contact__text">Хочешь забрать питомца, стать волонтером, или опекуном?<span class="contact__text contact__text_color_orange">Свяжись с нами!</span></p>
                 <address class="contact__address">
@@ -607,6 +670,8 @@
                     </form>
                 </div>
             </div>
+            </div>
+            
         </section>
     </main>
     <footer class="footer">
@@ -709,7 +774,14 @@
                                     </button>
                                 </form>
                             </div>
-                            <button class="modal__close"><img src="img/modal/close_btn.svg" alt=""></button>
+                            <button class="modal__close">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="29.1681" height="1.94454" rx="0.972271" transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 20.625)" fill="currentColor"/>
+                                    <rect width="29.1681" height="1.94454" rx="0.972271" transform="matrix(0.707106 0.707107 -0.707106 0.707107 1.375 0)" fill="currentColor"/>
+                                </svg>
+                                    
+                                <!-- <img src="img/modal/close_btn.svg" alt=""> -->
+                            </button>
                         </div>
                         
                 </div>
