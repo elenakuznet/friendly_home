@@ -1,11 +1,15 @@
 .about {
     padding: 90px 0 0 0;
     background-color: #F2F0F1;
+    
     @media(max-width: 1100px)  {
         padding: 70px 0 0 0;
     }
     @media (max-width: 768px) {
         padding: 60px 0 0 0;
+    }
+    @media (max-width: 480px) {
+        padding: 30px 0 0 0;
     }
 
     &__container {
@@ -29,14 +33,12 @@
             flex-direction: column;
             margin-bottom: 10px;
         }
-
     }
     &__title {
-        line-height: 60px;
         margin-bottom: 30px;
-        font-family: "Comfortaa";
-        font-size: 50px;
-        font-weight: 400;
+        @media (max-width: 480px) {
+            margin-bottom: 10px;
+        }
     }
     &__text {
         margin-bottom: 30px;
@@ -46,6 +48,14 @@
         @media(max-width: 1100px) {
             max-width: 480px;
             max-height: 308px;
+        }
+        @media (max-width: 768px) {
+            max-width: none;
+            height: 450px;
+            max-height: none;
+        }
+        @media (max-width: 480px) {
+            height: 174px;
         }
     }
     &__link {
@@ -58,6 +68,13 @@
         color: $orange;
         float: right;
         margin-bottom: 34px;
+        @media (max-width: 768px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        @media (max-width: 480px) {
+            margin-bottom: 11px;
+        }
     }
     &__image {
         width: 100%;

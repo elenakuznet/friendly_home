@@ -205,9 +205,13 @@
 .modal__open {
     @media (max-width: 1150px) {
         max-width: 148px;
-        max-height: 128px;
+        max-height: 126px;
     }
     @media (max-width: 750px) {
         margin: 0 auto;
+    }
+    @media (max-width: 480px) {
+        width: 84px;
+        height: 78px;
     }
 }
