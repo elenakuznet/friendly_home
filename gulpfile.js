@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 
 // gulp
 import gulp from 'gulp';

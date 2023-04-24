@@ -512,24 +512,26 @@ template {
 }
 
 .header__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding: 21px 0 27px 0;
+}
+
+.header__button {
+  justify-self: flex-start;
 }
 
 .header__logo {
   width: 355px;
   height: 72px;
+  justify-self: center;
 }
 
 .header__link {
+  justify-self: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -619,6 +621,7 @@ template {
 .banner__wrapper {
   display: grid;
   grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 55% 45%;
   grid-template-areas: "one three four" "two three four";
   -webkit-box-align: end;
   -ms-flex-align: end;
@@ -632,13 +635,20 @@ template {
 }
 
 .banner__text {
-  font-weight: 400;
-  font-size: 60px;
+  font-family: "Comfortaa";
+  font-weight: 300;
+  font-size: 40px;
   line-height: 60px;
 }
 
+.banner__text--orange {
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 60px;
+  color: #ff8a00;
+}
+
 .banner__link {
-  justify-self: left;
   grid-area: two;
   background-color: transparent;
 }
@@ -1022,6 +1032,9 @@ template {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .help__content {
@@ -1032,11 +1045,12 @@ template {
 .help__gallery {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: "rabbit rabbit dog_2 dog_2 dog_2 dog_2" " dog_1 dog_1 dog_2 dog_2 dog_2 dog_2";
+  grid-template-areas: "rabbit rabbit dog_2 dog_2 dog_2 dog_2" "dog_1 dog_1 dog_2 dog_2 dog_2 dog_2";
   gap: 20px;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  height: 298px;
 }
 
 .help__image {
@@ -1079,9 +1093,39 @@ template {
   display: none;
 }
 
-.swiper {
-  width: 200px;
+.swiper__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.swiper1 {
+  width: 295px;
   height: 131px;
+}
+
+.swiper2 {
+  width: 295px;
+  height: 131px;
+}
+
+.guardian__swiper {
+  display: none;
+}
+
+.guardian__slide--1 {
+  width: 130px;
+  height: 160px;
+}
+
+.guardian__slide--2 {
+  width: 218px;
+  height: 160px;
+}
+
+.guardian__slide--3 {
+  width: 225px;
+  height: 160px;
 }
 
 .volunteer__image {
@@ -1121,11 +1165,9 @@ template {
 }
 
 .item__title_second {
-  margin-bottom: 30px;
-}
-
-.item__title_second {
   padding-left: 100px;
+  margin-bottom: 30px;
+  line-height: 80px;
 }
 
 .item__title:before {
@@ -1168,14 +1210,17 @@ template {
 }
 
 .guardian-01 {
+  max-height: 382px;
   grid-area: guardian-01;
 }
 
 .guardian-02 {
+  max-height: 181px;
   grid-area: guardian-02;
 }
 
 .guardian-03 {
+  max-height: 181px;
   grid-area: guardian-03;
 }
 
@@ -1187,10 +1232,7 @@ template {
 
 .guardian__content {
   padding-left: 100px;
-}
-
-.guardian__swiper {
-  display: none;
+  padding-top: 22px;
 }
 
 .pets {
@@ -1208,6 +1250,8 @@ template {
 
 .swiper {
   max-width: 540px;
+  height: 410px;
+  text-align: center;
 }
 
 .button-left,
@@ -1216,6 +1260,17 @@ template {
   width: 54px;
   height: 54px;
   top: calc(50% - 27px);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 10;
 }
 
 .button-right {
@@ -1373,7 +1428,7 @@ template {
 .contact {
   padding-top: 90px;
   padding-bottom: 90px;
-  background: #fff;
+  background: #ffffff;
 }
 
 .contact__container {
@@ -1407,15 +1462,13 @@ template {
 }
 
 .contact__address {
-  font-style: normal;
   margin-bottom: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: 40px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .contact__subtitle {
@@ -1671,6 +1724,11 @@ template {
 
 @media (max-width: 1150px) {
   .banner__text {
+    font-size: 30px;
+    line-height: 44px;
+  }
+
+  .banner__text--orange {
     font-size: 44px;
     line-height: 54px;
   }
@@ -1734,6 +1792,11 @@ template {
     margin-bottom: 40px;
   }
 
+  .item__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
   .guardian__galery {
     min-width: 380px;
     row-gap: 12px;
@@ -1788,6 +1851,56 @@ template {
   .about__picture {
     max-width: 480px;
     max-height: 308px;
+  }
+
+  .contact {
+    padding: 70px 0 120px 0;
+  }
+
+  .contact__container {
+    max-width: 680px;
+  }
+
+  .contact__wrapper {
+    padding: 50px 93px;
+  }
+
+  .contact__title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  .contact__text {
+    max-width: 480px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .contact__address {
+    margin-bottom: 40px;
+  }
+
+  .contact__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .form {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .form__wrapper {
+    margin-bottom: 19px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .form__input {
+    max-width: 200px;
+    padding: 2.5px;
   }
 }
 
@@ -1925,6 +2038,7 @@ template {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    grid-template-rows: none;
   }
 
   .banner__content {
@@ -1932,6 +2046,11 @@ template {
   }
 
   .banner__text {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .banner__text--orange {
     font-size: 40px;
     line-height: 44px;
   }
@@ -2128,12 +2247,54 @@ template {
     line-height: 20px;
   }
 
+  .item__title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .item__title:before {
+    width: 60px;
+    height: 60px;
+    font-size: 34px;
+    line-height: 40px;
+  }
+
   .pets__grid {
     display: none;
   }
 
   .pets__swiper {
     display: block;
+  }
+
+  .contact {
+    padding: 60px 0 100px 0;
+  }
+
+  .contact__container {
+    max-width: 540px;
+  }
+
+  .contact__wrapper {
+    padding: 40px 60px;
+  }
+
+  .contact__title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .contact__text {
+    margin-bottom: 10px;
+  }
+
+  .contact__address {
+    margin-bottom: 30px;
+  }
+
+  .contact__subtitle {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
@@ -2148,9 +2309,14 @@ template {
   }
 
   .banner__text {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+
+  .banner__text--orange {
     font-size: 26px;
     line-height: 44px;
-    margin-bottom: 10px;
   }
 
   .banner__image {
@@ -2337,6 +2503,63 @@ template {
   .guardian__swiper {
     display: block;
   }
+
+  .guardian__galery {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact {
+    padding: 40px 0 70px 0;
+  }
+
+  .contact__wrapper {
+    padding: 30px 29px;
+  }
+
+  .contact__title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 14px;
+  }
+
+  .contact__text {
+    margin-bottom: 10px;
+  }
+
+  .contact__address {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .form__label {
+    max-width: 200px;
+  }
+
+  .form__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .form__button {
+    -ms-flex-item-align: center;
+    align-self: center;
+    width: 61px;
+    height: 73px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2356,5 +2579,25 @@ template {
   .header__logo {
     max-width: 161px;
     max-height: 32px;
+  }
+
+  .item__title:before {
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .swiper {
+    max-width: 270px;
+    height: 214px;
+  }
+
+  .button-right {
+    right: -27px;
+  }
+
+  .button-left {
+    left: -27px;
   }
 }

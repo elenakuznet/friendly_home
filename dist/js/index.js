@@ -4608,51 +4608,6 @@ const kenny = $('.kenny');
 $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
   $(this).addClass('active').hide().siblings().removeClass('active').show().closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active').closest('div.tabs').find('div.tabs__image').removeClass('active').eq($(this).index()).addClass('active');
 });
-
-// boris open
-
-// borisBtn.click(function() {
-//     boris.show(function() {
-//         sara.hide();
-//     });
-// })
-
-// borisBtn.click(function() {
-//     boris.show(function() {
-//         sara.toggle();
-//     });
-// })
-
-// borisBtn.click(function() {
-//     // boris.addClass('hidden');
-//     // boris.removeClass('hidden');
-//     // $(borisBtn).closest('choose').hide();
-//     boris.toggleClass('hidden');
-//     sara.hide();
-// })
-
-// saraBtn.click(function() {
-//     // boris.addClass('hidden');
-//     // boris.removeClass('hidden');
-//     sara.toggleClass('hidden');
-//     sara.hide();
-// })
-
-// luiBtn.click(function() {
-//     lui.toggleClass('hidden');
-//     sara.hide();
-// })
-
-// piterBtn.click(function() {
-//     piter.toggleClass('hidden');
-//     sara.hide();
-// })
-
-// kennyBtn.click(function() {
-//     kenny.toggleClass('hidden');
-//     sara.hide();
-// })
-
 const modal = $('.modal');
 const modalMain = $('.modal__main');
 const openBtn = $('.modal__open');
@@ -4711,26 +4666,6 @@ menuLink.click(function () {
 
 // Слайдер 
 
-// if (window.innerWidth <= 768) {
-//     new Swiper('.swiper', {
-//             slidesPerView: 1,
-//             loop: true,
-
-//             pagination: {
-//                 el: '.swiper-pagination',
-//             },
-
-//             navigation: {
-//                 nextEl: '.swiper-button-next',
-//                 prevEl: '.swiper-button-prev',
-//             },
-
-//             scrollbar: {
-//                 el: '.swiper-scrollbar',
-//             },
-//         });
-// } 
-
 new Swiper('.swiper', {
   slidesPerView: 1,
   // spaceBetween: 20,
@@ -4763,12 +4698,23 @@ new Swiper('.swiper', {
   // }
 });
 
-const carousel = new Swiper('.carousel', {
+new Swiper('.swiper1', {
   direction: 'horizontal',
-  slidesPerView: 1,
-  // spaceBetween: 20,
+  slidesPerView: 1.5,
+  spaceBetween: 10,
   loop: true,
-  centeredSlides: true
+  // centeredSlides: true,
+  mousewheel: true,
+  keyboard: true
+});
+new Swiper('.swiper2', {
+  direction: 'horizontal',
+  slidesPerView: 1.5,
+  spaceBetween: 10,
+  loop: true,
+  // centeredSlides: true,
+  mousewheel: true,
+  keyboard: true
 });
 
 // Карта
