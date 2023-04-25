@@ -3,26 +3,21 @@ const menuOverlay =$('.menu__overlay');
 const menu = $('.menu');
 const menuLink = $('.menu__link');
 
-const borisBtn = $('.boris__button');
-const saraBtn = $('.sara__button');
-const luiBtn = $('.lui__button');
-const piterBtn = $('.piter__button');
-const kennyBtn = $('.kenny__button');
-
-const boris = $('.boris');
-const sara = $('.sara');
-const lui = $('.lui');
-const piter =$('.piter');
-const kenny = $('.kenny');
-
-
-
+$('.banner__item.active').hide();
 $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
         $(this)
         .addClass('active').hide().siblings().removeClass('active').show()
         .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active')
         .closest('div.tabs').find('div.tabs__image').removeClass('active').eq($(this).index()).addClass('active')
 });
+
+
+// $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+//         $(this)
+//         .addClass('active').hide().siblings().removeClass('active').show()
+//         .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active')
+//         .closest('div.tabs').find('div.tabs__image').removeClass('active').eq($(this).index()).addClass('active')
+// });
 
 
 
@@ -130,7 +125,7 @@ new Swiper('.swiper', {
     });
 
 
-new Swiper('.swiper1', {
+new Swiper('.swiper-help', {
         direction: 'horizontal',
         slidesPerView: 1.5,
         spaceBetween: 10,
@@ -140,7 +135,7 @@ new Swiper('.swiper1', {
         keyboard: true,
     });
 
-new Swiper('.swiper2', {
+new Swiper('.swiper-guardian', {
         direction: 'horizontal',
         slidesPerView: 1.5,
         spaceBetween: 10,

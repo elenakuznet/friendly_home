@@ -50,6 +50,17 @@
         grid-template-columns: 280px 380px;
         gap: 20px;
         position: relative;
+        outline: 1px solid transparent;
+        &:hover {
+            outline: 1px solid $orange;
+        }
+        &:focus {
+            outline: 1px solid $orange;
+        }
+        &:active {
+            outline: 1px solid $orange;
+        }
+
         @media (max-width: 1150px) {
             grid-template-columns: 200px 360px;
             grid-template-rows: 130px;
@@ -323,6 +334,18 @@
             overflow-x: hidden;
             overflow-y: hidden;
             column-gap: 10px;
+        }
+    }
+    &__item {
+        outline: 1px solid transparent;
+        &:hover {
+            outline: 1px solid $orange;
+        }
+        &:focus {
+            outline: 1px solid $orange;
+        }
+        &:active {
+            outline: 1px solid $orange;
         }
     }
     &__image {

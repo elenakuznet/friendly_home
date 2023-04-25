@@ -100,7 +100,7 @@
     grid-template-areas: 
     "one one one one one two two two six six six six"
     "three three three four four four five five six six six six";
-    grid-template-rows: 326px 352px;
+    // grid-template-rows: 326px 352px;
     column-gap: 20px;
     row-gap: 44px;
     &__image {
@@ -150,23 +150,38 @@
 }
 
 .pinki {
-    height: 280px;
+    height: 280px; 
+    @media (max-width: 1100px) {
+        height: 201px;
+    }
 }
 
 .murzik {
     height: 280px;
+    @media (max-width: 1100px) {
+        height: 201px;
+    }
 }
 
 .jack {
     height: 280px;
+    @media (max-width: 1100px) {
+        height: 180px;
+    }
 }
 
 .jerry {
     height: 280px;
+    @media (max-width: 1100px) {
+        height: 180px;
+    }
 }
 
 .misha-richard {
     height: 650px;
+    @media (max-width: 1100px) {
+        height: 478px;
+    }
 }
 
 .rokky {
