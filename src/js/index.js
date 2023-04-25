@@ -1,7 +1,15 @@
 const burgerBtn = $('.header__button');
+const burgerCloseBtn = $('.header__close');
 const menuOverlay =$('.menu__overlay');
 const menu = $('.menu');
 const menuLink = $('.menu__link');
+
+const modal = $('.modal');
+const modalMain = $('.modal__main');
+const openBtn = $('.modal__open');
+const closeBtn = $('.modal__close');
+
+
 
 $('.banner__item.active').hide();
 $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
@@ -18,13 +26,6 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
 //         .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active')
 //         .closest('div.tabs').find('div.tabs__image').removeClass('active').eq($(this).index()).addClass('active')
 // });
-
-
-
-const modal = $('.modal');
-const modalMain = $('.modal__main');
-const openBtn = $('.modal__open');
-const closeBtn = $('.modal__close');
 
 
 // modal open
@@ -57,12 +58,15 @@ $('.modal').click(function(event){
 });
 
 
+
 function closeBurger() {
     menu.hide(200, function() {
         menuOverlay.hide(100, function() {
             // removeInnert(menu.get(0));
+            burgerCloseBtn.fadeOut(100, function() {
+                burgerBtn.fadeIn(100);
         });
-        
+    });
     });
 }
 
@@ -70,9 +74,12 @@ function closeBurger() {
 burgerBtn.click(function() {
     menuOverlay.show(100, function() {
         menu.show(200, function() {
+            burgerBtn.fadeOut(100, function() {
+                burgerCloseBtn.fadeIn(100);
             // addInnert(menu.get(0));
         });
     })
+})
 })
 
 

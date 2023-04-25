@@ -43,14 +43,23 @@
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
-                <button class="header__button button" aria-haspopup="menu" aria-label="Открыть меню">
-                    <!-- <img class="header__burger" src="img/header/menu.svg" alt="кнопка открыть меню" width="41" height="21"> -->
-                    <svg class="header__burger" width="40" height="21" viewBox="0 0 40 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="40" height="3" rx="1" fill="currentColor"/>
-                        <rect y="9" width="40" height="3" rx="1" fill="currentColor"/>
-                        <rect y="18" width="29" height="3" rx="1" fill="currentColor"/>
-                    </svg>                        
-                </button>
+                <div class="header__buttons">
+                    <button class="header__button button" aria-haspopup="menu" aria-label="Открыть меню">
+                        <!-- <img class="header__burger" src="img/header/menu.svg" alt="кнопка открыть меню" width="41" height="21"> -->
+                        <svg class="header__burger" width="40" height="21" viewBox="0 0 40 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="3" rx="1" fill="currentColor"/>
+                            <rect y="9" width="40" height="3" rx="1" fill="currentColor"/>
+                            <rect y="18" width="29" height="3" rx="1" fill="currentColor"/>
+                        </svg>                        
+                    </button>
+                    <button class="header__close button">
+                        <svg width="33" height="31" viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.797363" y="28.5814" width="40" height="3" rx="1" transform="rotate(-45 0.797363 28.5814)" fill="#282626"/>
+                            <rect x="3.91846" y="0.29718" width="40" height="3" rx="1" transform="rotate(45 3.91846 0.29718)" fill="#282626"/>
+                        </svg>
+                    </button>
+                </div>
+                
                         <div class="menu__overlay"></div>
                         <div class="menu">
                             <div class="triangle"></div>
@@ -61,6 +70,10 @@
                                     <li class="menu__item"><a class="menu__link" href="#help">Как ты можешь помочь нам?</a></li>
                                     <li class="menu__item"><a class="menu__link" href="#">Наши питомцы</a></li>
                                     <li class="menu__item"><a class="menu__link" href="#contact">Контакты</a></li>
+                                    <li class="menu__mobile"><a  href="tel:88493003957">
+                                        <img src="img/header/call.svg" alt="телефон" width="24" height="24">
+                                        8 (849) 300 - 39 -57
+                                    </a></li>
                                 </ul>
                             </nav>
                         </div>

@@ -4592,26 +4592,25 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
 !function() {
 const burgerBtn = $('.header__button');
+const burgerCloseBtn = $('.header__close');
 const menuOverlay = $('.menu__overlay');
 const menu = $('.menu');
 const menuLink = $('.menu__link');
-const borisBtn = $('.boris__button');
-const saraBtn = $('.sara__button');
-const luiBtn = $('.lui__button');
-const piterBtn = $('.piter__button');
-const kennyBtn = $('.kenny__button');
-const boris = $('.boris');
-const sara = $('.sara');
-const lui = $('.lui');
-const piter = $('.piter');
-const kenny = $('.kenny');
-$('ul.tabs__caption').on('click', 'li:not(.active)', function () {
-  $(this).addClass('active').hide().siblings().removeClass('active').show().closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active').closest('div.tabs').find('div.tabs__image').removeClass('active').eq($(this).index()).addClass('active');
-});
 const modal = $('.modal');
 const modalMain = $('.modal__main');
 const openBtn = $('.modal__open');
 const closeBtn = $('.modal__close');
+$('.banner__item.active').hide();
+$('ul.tabs__caption').on('click', 'li:not(.active)', function () {
+  $(this).addClass('active').hide().siblings().removeClass('active').show().closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active').closest('div.tabs').find('div.tabs__image').removeClass('active').eq($(this).index()).addClass('active');
+});
+
+// $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+//         $(this)
+//         .addClass('active').hide().siblings().removeClass('active').show()
+//         .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active')
+//         .closest('div.tabs').find('div.tabs__image').removeClass('active').eq($(this).index()).addClass('active')
+// });
 
 // modal open
 
@@ -4645,16 +4644,23 @@ function closeBurger() {
   menu.hide(200, function () {
     menuOverlay.hide(100, function () {
       // removeInnert(menu.get(0));
+      burgerCloseBtn.fadeOut(100, function () {
+        burgerBtn.fadeIn(100);
+      });
     });
   });
 }
 burgerBtn.click(function () {
   menuOverlay.show(100, function () {
     menu.show(200, function () {
-      // addInnert(menu.get(0));
+      burgerBtn.fadeOut(100, function () {
+        burgerCloseBtn.fadeIn(100);
+        // addInnert(menu.get(0));
+      });
     });
   });
 });
+
 menuOverlay.click(function (event) {
   if (event.target === this) {
     closeBurger();
@@ -4698,7 +4704,7 @@ new Swiper('.swiper', {
   // }
 });
 
-new Swiper('.swiper1', {
+new Swiper('.swiper-help', {
   direction: 'horizontal',
   slidesPerView: 1.5,
   spaceBetween: 10,
@@ -4707,7 +4713,7 @@ new Swiper('.swiper1', {
   mousewheel: true,
   keyboard: true
 });
-new Swiper('.swiper2', {
+new Swiper('.swiper-guardian', {
   direction: 'horizontal',
   slidesPerView: 1.5,
   spaceBetween: 10,
