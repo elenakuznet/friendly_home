@@ -40,7 +40,6 @@ let dev = false;
 
 const allJS = [
   'src/libs/jquery-3.6.3.min.js',
-  'src/libs/inert.js',
   'src/libs/jquery-ui.min.js',
   'src/libs/swiper-bundle.min.js',
 ]
