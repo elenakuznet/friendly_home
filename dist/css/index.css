@@ -1725,6 +1725,7 @@ template {
   padding: 340px 0;
   overflow-y: auto;
   cursor: pointer;
+  z-index: 100;
 }
 
 .modal__main {
