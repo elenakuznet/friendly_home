@@ -680,26 +680,6 @@ template {
   justify-self: center;
 }
 
-.banner__image--sara {
-  background-image: url("../img/banner/sara_bg.png");
-}
-
-.banner__image--boris {
-  background-image: url("../img/banner/boris_bg.png");
-}
-
-.banner__image--lui {
-  background-image: url("../img/banner/lui_bg.png");
-}
-
-.banner__image--piter {
-  background-image: url("../img/banner/piter_bg.png");
-}
-
-.banner__image--kenny {
-  background-image: url("../img/banner/kenny_bg.png");
-}
-
 .banner__list {
   grid-area: four;
   display: -webkit-box;
