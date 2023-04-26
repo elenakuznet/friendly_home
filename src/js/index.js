@@ -154,8 +154,46 @@ new Swiper('.swiper-guardian', {
 
 // Карта
 
-setTimeout(function(){
-    ymaps.ready(init);
+
+// setTimeout(function(){
+//     var elem = document.createElement('script');
+//     elem.type = 'text/javascript';
+//     elem.src = '//api-maps.yandex.ru/2.1/?apikey=f4112ee9-ccf1-46a4-aaa2-b243dc478c03&lang=ru_RU';
+//     document.getElementsByTagName('body')[0].appendChild(elem);
+// }, 2000);
+// function getYaMap(){
+//     const myMap = new ymaps.Map("map", {
+//         center: [55.848968, 37.376054],
+//         zoom: 17
+//     });
+
+//     const mark = new ymaps.Placemark([55.848968, 37.376054], {
+//         hintContent: 'Friendly House - приют для животных',
+//     }, {
+//         iconLayout: 'default#image',
+//         iconImageHref: 'img/footer/Vector.svg',
+//         iconImageSize: [39, 59],
+//         iconImageOffset: [-20, -59]
+//     });
+//     myMap.geoObjects.add(mark);
+
+//     myMap.behaviors.disable('drag');
+
+//     myMap.controls.remove('geolocationControl');
+//     myMap.controls.remove('searchControl');
+//     myMap.controls.remove('trafficControl');
+//     myMap.controls.remove('typeSelector');				
+// };
+
+let flag = 0;
+
+window.addEventListener('scroll', function(){
+    let scrollY = window.scrollY;
+    console.log(scrollY);
+    let mapOffset = document.querySelector('#map').offsetTop;
+    console.log(mapOffset);
+    if ((scrollY >= mapOffset - 500) && (flag == 0)) {
+        ymaps.ready(init);
         function init(){
             const myMap = new ymaps.Map("map", {
                 center: [55.848968, 37.376054],
@@ -181,9 +219,10 @@ setTimeout(function(){
             // myMap.controls.remove('fullscreenControl');
             // myMap.controls.remove('zoomControl');
         }
-        
+        flag = 1;
+    }
+})
 
-}, 3000);
 
 
 // function init (ymaps) {
@@ -220,10 +259,10 @@ setTimeout(function(){
 //             // myMap.controls.remove('fullscreenControl');
 //             // myMap.controls.remove('zoomControl');
 //         }
-        
-        
-        
-        
+
+
+
+
 // //!--innert 
 // let prevActiveElement;
 
