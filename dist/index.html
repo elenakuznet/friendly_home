@@ -31,9 +31,9 @@
             createLink('css/index.css');
         })
     </script> -->
-    <!-- <link rel="preconnect" href="//api-maps.yandex.ru">
-    <link rel="dns-prefetch" href="//api-maps.yandex.ru"> -->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=f4112ee9-ccf1-46a4-aaa2-b243dc478c03&lang=ru_RU&onload=init"></script>
+    <link rel="preconnect" href="//api-maps.yandex.ru">
+    <link rel="dns-prefetch" href="//api-maps.yandex.ru">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f4112ee9-ccf1-46a4-aaa2-b243dc478c03&lang=ru_RU"></script>
     <script defer src="js/index.min.js"></script>
     <title>Friendly House</title>
 </head>
@@ -826,7 +826,7 @@
     <footer class="footer">
         <div class="footer__container container">
             <div class="footer__location">
-                <div id="map" class="map"></div>
+                <div id="map" class="map" loading="lazy"></div>
                 <div class="footer__content">
                     <div class="footer__description">
                         <h3 class="footer__title">Friendly House</h3>

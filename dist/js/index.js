@@ -8673,6 +8673,20 @@ new Swiper('.swiper-guardian', {
 
 // Карта
 
+setTimeout(function () {
+  var elem = document.createElement('script');
+  elem.type = 'text/javascript';
+  elem.src = "//api-maps.yandex.ru/2.1/?apikey=f4112ee9-ccf1-46a4-aaa2-b243dc478c03&lang=ru_RU";
+  document.getElementById('map').appendChild(elem);
+}, 3000);
+
+// function init (ymaps) {
+//     var myMap = new ymaps.Map("YMapsID", {
+//         center: [55.87, 37.66],
+//         zoom: 10
+//     });
+// }
+
 ymaps.ready(init);
 function init() {
   const myMap = new ymaps.Map("map", {
