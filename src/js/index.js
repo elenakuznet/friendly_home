@@ -9,6 +9,8 @@ const modalMain = $('.modal__main');
 const openBtn = $('.modal__open');
 const closeBtn = $('.modal__close');
 
+const form = $('.form');
+
 
 
 $('.banner__item.active').hide();
@@ -92,6 +94,30 @@ menuOverlay.click(function(event){
 
 menuLink.click(function() {
     closeBurger();
+})
+
+
+
+// Форма
+
+
+form.submit(function(event) {
+    event.preventDefault();
+    $.ajax({
+        url: 'https://jsonplaceholder.typicode.com/posts',
+        type: 'POST',
+        data: $(this).serialize(),
+        success(data) {
+            const [{tel, email}] = form;
+            $('.message').text('Спасибо, ваша заявка принята!')
+            // form.slideUp(300, function() {
+            //     tel.value = '';
+            //     email.value = '';
+            // }); 
+            $('.mobile').val('');
+            $('.email').val('');
+        }
+    })
 })
 
 
@@ -189,9 +215,9 @@ let flag = 0;
 
 window.addEventListener('scroll', function(){
     let scrollY = window.scrollY;
-    console.log(scrollY);
+    // console.log(scrollY);
     let mapOffset = document.querySelector('#map').offsetTop;
-    console.log(mapOffset);
+    // console.log(mapOffset);
     if ((scrollY >= mapOffset - 500) && (flag == 0)) {
         ymaps.ready(init);
         function init(){
@@ -222,15 +248,6 @@ window.addEventListener('scroll', function(){
         flag = 1;
     }
 })
-
-
-
-// function init (ymaps) {
-//     var myMap = new ymaps.Map("YMapsID", {
-//         center: [55.87, 37.66],
-//         zoom: 10
-//     });
-// }
 
 
 // ymaps.ready(init);
