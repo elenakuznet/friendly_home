@@ -31,7 +31,9 @@
             createLink('css/index.css');
         })
     </script> -->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=f4112ee9-ccf1-46a4-aaa2-b243dc478c03&lang=ru_RU"></script>
+    <!-- <link rel="preconnect" href="//api-maps.yandex.ru">
+    <link rel="dns-prefetch" href="//api-maps.yandex.ru"> -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f4112ee9-ccf1-46a4-aaa2-b243dc478c03&lang=ru_RU&onload=init"></script>
     <script defer src="js/index.min.js"></script>
     <title>Friendly House</title>
 </head>
@@ -698,6 +700,9 @@
 
                             <figure class="swiper-slide">
                                 <picture>
+                                    <source media="(max-width: 460px)" srcset="img/pets/murzik-1-mob.avif" type="image/avif">
+                                    <source media="(max-width: 460px)" srcset="img/pets/murzik-1-mob.webp" type="image/webp">
+                                    <source media="(max-width: 460px)" srcset="img/pets/murzik-1-mob.jpg" type="image/jpg">
                                     <source srcset="img/pets/murzik-1.avif" type="image/avif">
                                     <source srcset="img/pets/murzik-1.webp" type="image/webp">
                                     <img loading="lazy" class="gallery__image murzik-slide" src="img/pets/murzik-1.jpg" alt="Мурзик" width="280" height="280">
@@ -708,6 +713,9 @@
 
                             <figure class="swiper-slide">
                                 <picture>
+                                    <source media="(max-width: 460px)" srcset="img/pets/misha_richard-mob.avif" type="image/avif">
+                                    <source media="(max-width: 460px)" srcset="img/pets/misha_richard-mob.webp" type="image/webp">
+                                    <source media="(max-width: 460px)" srcset="img/pets/misha_richard-mob.jpg" type="image/jpg">
                                     <source srcset="img/pets/misha_richard.avif" type="image/avif">
                                     <source srcset="img/pets/misha_richard.webp" type="image/webp">
                                     <img loading="lazy" class="gallery__image misha-richard-slide" src="img/pets/misha_richard.jpg" alt="Миша (кот) и Ричард (пёс)">
@@ -717,6 +725,9 @@
 
                             <figure class="swiper-slide">
                                 <picture>
+                                    <source media="(max-width: 460px)" srcset="img/pets/jack-mob.avif" type="image/avif">
+                                    <source media="(max-width: 460px)" srcset="img/pets/jack-mob.webp" type="image/webp">
+                                    <source media="(max-width: 460px)" srcset="img/pets/jack-mob.jpg" type="image/jpg">
                                     <source srcset="img/pets/jack.avif" type="image/avif">
                                     <source srcset="img/pets/jack.webp" type="image/webp">
                                     <img loading="lazy" class="gallery__image jack-slide" src="img/pets/jack.jpg" alt="Джек" width="280" height="280">
@@ -726,6 +737,9 @@
 
                             <figure class="swiper-slide">
                                 <picture>
+                                    <source media="(max-width: 460px)" srcset="jerry-1-mob.avif" type="image/avif">
+                                    <source media="(max-width: 460px)" srcset="jerry-1-mob.webp" type="image/webp">
+                                    <source media="(max-width: 460px)" srcset="jerry-1-mob.jpg" type="image/jpg">
                                     <source srcset="img/pets/jerry-1.avif" type="image/avif">
                                     <source srcset="img/pets/jerry-1.webp" type="image/webp">
                                     <img loading="lazy" class="gallery__image jerry-slide" src="img/pets/jerry-1.jpg" alt="Джерри" width="280" height="280">
@@ -736,11 +750,17 @@
                             <figure class="swiper-slide">
                                 <div class="parrots">
                                     <picture>
+                                        <source media="(max-width: 460px)" srcset="rokky-mob.avif" type="image/avif">
+                                        <source media="(max-width: 460px)" srcset="rokky-mob.webp" type="image/webp">
+                                        <source media="(max-width: 460px)" srcset="rokky-mob.jpg" type="image/jpg">
                                         <source srcset="img/pets/rokky.avif" type="image/avif">
                                         <source srcset="img/pets/rokky.webp" type="image/webp">
                                         <img loading="lazy" class=" rokky-slide" src="img/pets/rokky.jpg" alt="Рокки" width="180" height="140">
                                     </picture>
                                     <picture>
+                                        <source media="(max-width: 460px)" srcset="senya-mob.avif" type="image/avif">
+                                        <source media="(max-width: 460px)" srcset="senya-mob.webp" type="image/webp">
+                                        <source media="(max-width: 460px)" srcset="senya-mob.jpg" type="image/jpg">
                                         <source srcset="img/pets/senya.avif" type="image/avif">
                                         <source srcset="img/pets/senya.webp" type="image/webp">
                                         <img loading="lazy" class="senya-slide" src="img/pets/senya.jpg" alt="Сеня" width="180" height="140">  

@@ -154,6 +154,22 @@ new Swiper('.swiper-guardian', {
 
 // Карта
 
+// setTimeout(function(){
+//     var elem = document.createElement('script');
+//     elem.type = 'text/javascript';
+//     elem.src = "//api-maps.yandex.ru/services/constructor/1.0/js/?um=constructord9d8e030b6d918576850&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;scroll='true'";
+//     document.getElementById('map').appendChild(elem);
+// }, 3000);
+
+
+// function init (ymaps) {
+//     var myMap = new ymaps.Map("YMapsID", {
+//         center: [55.87, 37.66],
+//         zoom: 10
+//     });
+// }
+
+
 ymaps.ready(init);
         function init(){
             const myMap = new ymaps.Map("map", {
