@@ -3,25 +3,43 @@
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.67);
-    padding: 340px 0;
+    padding: 340px 25px;
     overflow-y: auto;
     cursor: pointer;
     z-index: 100;
+    @media (max-width: 768px) {
+        padding: 170px 25px;
+    }
+    @media (max-width: 480px) {
+        padding: 100px 25px;
+    }
     &__main {
         position: relative;
         cursor: default;
     }
-}
-
-.modal__close {
+    &__close {
     position: absolute;
     top: 20px;
     right: 25px;
     border: 0;
     cursor: pointer;
     color: $color-text;
+    background: transparent;
+    @media (max-width: 768px) {
+        top: 17px;
+        right: 21px;
+    }
+    @media (max-width: 480px) {
+        width: 16px;
+        height: 16px;
+        top: 8px;
+        right: 11px;
+    }
     &:hover {
         color: #5B5656;
     }
 }
+}
+
+
 

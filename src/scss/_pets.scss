@@ -14,7 +14,7 @@
     }
 }
 
-.pets__swiper {
+.pets__slider {
     display: none;
     position: relative;
     @media (max-width: 768px) {
@@ -22,7 +22,7 @@
     }
 }
 
-.swiper {
+.pets__swiper {
     max-width: 540px;
     height: 410px;
     text-align: center;

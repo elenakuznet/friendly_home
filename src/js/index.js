@@ -22,14 +22,6 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
 });
 
 
-// $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
-//         $(this)
-//         .addClass('active').hide().siblings().removeClass('active').show()
-//         .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active')
-//         .closest('div.tabs').find('div.tabs__image').removeClass('active').eq($(this).index()).addClass('active')
-// });
-
-
 // modal open
 
 openBtn.click(function() {
@@ -158,7 +150,7 @@ new Swiper('.swiper', {
     });
 
 
-new Swiper('.swiper-help', {
+new Swiper('.help__swiper', {
         direction: 'horizontal',
         slidesPerView: 1.5,
         spaceBetween: 10,
@@ -168,48 +160,19 @@ new Swiper('.swiper-help', {
         keyboard: true,
     });
 
-new Swiper('.swiper-guardian', {
+new Swiper('.guardian__swiper', {
         direction: 'horizontal',
         slidesPerView: 1.5,
+        // slidesPerView: 'auto',
         spaceBetween: 10,
         loop: true,
         // centeredSlides: true,
         mousewheel: true,
         keyboard: true,
     });
+
 
 // Карта
-
-
-// setTimeout(function(){
-//     var elem = document.createElement('script');
-//     elem.type = 'text/javascript';
-//     elem.src = '//api-maps.yandex.ru/2.1/?apikey=f4112ee9-ccf1-46a4-aaa2-b243dc478c03&lang=ru_RU';
-//     document.getElementsByTagName('body')[0].appendChild(elem);
-// }, 2000);
-// function getYaMap(){
-//     const myMap = new ymaps.Map("map", {
-//         center: [55.848968, 37.376054],
-//         zoom: 17
-//     });
-
-//     const mark = new ymaps.Placemark([55.848968, 37.376054], {
-//         hintContent: 'Friendly House - приют для животных',
-//     }, {
-//         iconLayout: 'default#image',
-//         iconImageHref: 'img/footer/Vector.svg',
-//         iconImageSize: [39, 59],
-//         iconImageOffset: [-20, -59]
-//     });
-//     myMap.geoObjects.add(mark);
-
-//     myMap.behaviors.disable('drag');
-
-//     myMap.controls.remove('geolocationControl');
-//     myMap.controls.remove('searchControl');
-//     myMap.controls.remove('trafficControl');
-//     myMap.controls.remove('typeSelector');				
-// };
 
 let flag = 0;
 
