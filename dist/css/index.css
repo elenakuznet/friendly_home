@@ -520,6 +520,9 @@ template {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 21px 0 27px 0;
 }
 
@@ -576,13 +579,6 @@ template {
   z-index: 20;
 }
 
-.menu__overlay {
-  position: fixed;
-  inset: 0;
-  cursor: pointer;
-  display: none;
-}
-
 .menu__nav {
   position: relative;
   max-width: 394px;
@@ -617,6 +613,13 @@ template {
   font-weight: 550;
   font-size: 18px;
   line-height: 24px;
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  cursor: pointer;
   display: none;
 }
 
@@ -1026,6 +1029,7 @@ template {
 .help {
   padding: 90px 0;
   background-color: #F2F0F1;
+  overflow: hidden;
 }
 
 .help__container {
@@ -1110,34 +1114,31 @@ template {
   height: 349px;
 }
 
-.help__swiper {
+.help__slider {
   display: none;
 }
 
-.swiper__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.swiper-help {
-  width: 295px;
+.help__swiper {
+  width: 100%;
+  max-width: 500px;
   height: 131px;
   overflow: hidden;
 }
 
-.swiper-guardian {
-  width: 295px;
-  height: 131px;
-  overflow: hidden;
+.guardian__slider {
+  display: none;
 }
 
 .guardian__swiper {
-  display: none;
+  width: 100%;
+  max-width: 500px;
+  height: 160px;
 }
 
-.volunteer__image {
+.volunteer {
   width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .second__text {
@@ -1247,6 +1248,11 @@ template {
   padding-left: 100px;
 }
 
+.swiper__caption {
+  font-size: 18px;
+  line-height: 24px;
+}
+
 .pets {
   padding: 90px 0 0 0;
 }
@@ -1255,12 +1261,12 @@ template {
   margin-bottom: 50px;
 }
 
-.pets__swiper {
+.pets__slider {
   display: none;
   position: relative;
 }
 
-.swiper {
+.pets__swiper {
   max-width: 540px;
   height: 410px;
   text-align: center;
@@ -1294,36 +1300,64 @@ template {
 }
 
 .pinki-slide {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   max-width: 540px;
   max-height: 368px;
 }
 
 .murzik-slide {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   max-width: 459px;
   max-height: 368px;
 }
 
 .misha-richard-slide {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   max-width: 280px;
   max-height: 368px;
 }
 
 .jack-slide {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   max-width: 394px;
   max-height: 368px;
 }
 
 .jerry-slide {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   max-width: 295px;
   max-height: 368px;
 }
 
 .rokky-slide {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   width: 237px;
   height: 184px;
 }
 
 .senya-slide {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   width: 237px;
   height: 184px;
 }
@@ -1702,7 +1736,7 @@ template {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.67);
-  padding: 340px 0;
+  padding: 340px 25px;
   overflow-y: auto;
   cursor: pointer;
   z-index: 100;
@@ -1720,6 +1754,7 @@ template {
   border: 0;
   cursor: pointer;
   color: #282626;
+  background: transparent;
 }
 
 .modal__close:hover {
@@ -2767,7 +2802,7 @@ swiper-container .swiper-notification {
     max-height: 308px;
   }
 
-  .volunteer__image {
+  .volunteer {
     width: 400px;
     height: 349px;
   }
@@ -2784,6 +2819,11 @@ swiper-container .swiper-notification {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: end;
+  }
+
+  .gallery__caption {
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .pinki {
@@ -3071,6 +3111,11 @@ swiper-container .swiper-notification {
     flex-direction: column-reverse;
   }
 
+  .volunteer {
+    width: 700px;
+    height: 385px;
+  }
+
   .guardian-01 {
     height: 491px;
     max-height: none;
@@ -3277,7 +3322,7 @@ swiper-container .swiper-notification {
     display: none;
   }
 
-  .pets__swiper {
+  .pets__slider {
     display: block;
   }
 
@@ -3309,6 +3354,15 @@ swiper-container .swiper-notification {
   .contact__subtitle {
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .modal {
+    padding: 170px 25px;
+  }
+
+  .modal__close {
+    top: 17px;
+    right: 21px;
   }
 }
 
@@ -3506,20 +3560,40 @@ swiper-container .swiper-notification {
 }
 
 @media (max-width: 580px) {
+  .help__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
   .help__gallery {
     display: none;
   }
 
-  .help__swiper {
+  .help__slider {
     display: block;
   }
 
-  .guardian__swiper {
+  .guardian__slider {
     display: block;
   }
 
   .guardian__galery {
     display: none;
+  }
+
+  .guardian__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -3651,6 +3725,10 @@ swiper-container .swiper-notification {
     padding-left: 48px;
   }
 
+  .volunteer {
+    max-height: 149px;
+  }
+
   .second__text {
     padding-left: 48px;
   }
@@ -3680,7 +3758,12 @@ swiper-container .swiper-notification {
     padding-left: 48px;
   }
 
-  .swiper {
+  .swiper__caption {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .pets__swiper {
     max-width: 270px;
     height: 214px;
   }
@@ -3691,5 +3774,21 @@ swiper-container .swiper-notification {
 
   .button-left {
     left: -27px;
+  }
+
+  .gallery__caption {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .modal {
+    padding: 100px 25px;
+  }
+
+  .modal__close {
+    width: 16px;
+    height: 16px;
+    top: 8px;
+    right: 11px;
   }
 }

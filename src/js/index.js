@@ -1,12 +1,12 @@
 const burgerBtn = $('.header__button');
 const burgerCloseBtn = $('.header__close');
-const menuOverlay =$('.menu__overlay');
+const menuOverlay =$('.overlay');
 const menu = $('.menu');
 const menuLink = $('.menu__link');
 
 const modal = $('.modal');
 const modalMain = $('.modal__main');
-const openBtn = $('.modal__open');
+const openBtn = $('.modal-open');
 const closeBtn = $('.modal__close');
 
 const form = $('.form');

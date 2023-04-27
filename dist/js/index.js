@@ -8541,24 +8541,18 @@ var __webpack_exports__ = {};
 !function() {
 const burgerBtn = $('.header__button');
 const burgerCloseBtn = $('.header__close');
-const menuOverlay = $('.menu__overlay');
+const menuOverlay = $('.overlay');
 const menu = $('.menu');
 const menuLink = $('.menu__link');
 const modal = $('.modal');
 const modalMain = $('.modal__main');
-const openBtn = $('.modal__open');
+const openBtn = $('.modal-open');
 const closeBtn = $('.modal__close');
+const form = $('.form');
 $('.banner__item.active').hide();
 $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
   $(this).addClass('active').hide().siblings().removeClass('active').show().closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active').closest('div.tabs').find('picture.tabs__image').removeClass('active').eq($(this).index()).addClass('active');
 });
-
-// $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
-//         $(this)
-//         .addClass('active').hide().siblings().removeClass('active').show()
-//         .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active')
-//         .closest('div.tabs').find('div.tabs__image').removeClass('active').eq($(this).index()).addClass('active')
-// });
 
 // modal open
 
@@ -8618,6 +8612,30 @@ menuLink.click(function () {
   closeBurger();
 });
 
+// Форма
+
+form.submit(function (event) {
+  event.preventDefault();
+  $.ajax({
+    url: 'https://jsonplaceholder.typicode.com/posts',
+    type: 'POST',
+    data: $(this).serialize(),
+    success(data) {
+      const [{
+        tel,
+        email
+      }] = form;
+      $('.message').text('Спасибо, ваша заявка принята!');
+      // form.slideUp(300, function() {
+      //     tel.value = '';
+      //     email.value = '';
+      // }); 
+      $('.mobile').val('');
+      $('.email').val('');
+    }
+  });
+});
+
 // Слайдер 
 
 new Swiper('.swiper', {
@@ -8652,7 +8670,7 @@ new Swiper('.swiper', {
   // }
 });
 
-new Swiper('.swiper-help', {
+new Swiper('.help__swiper', {
   direction: 'horizontal',
   slidesPerView: 1.5,
   spaceBetween: 10,
@@ -8661,9 +8679,10 @@ new Swiper('.swiper-help', {
   mousewheel: true,
   keyboard: true
 });
-new Swiper('.swiper-guardian', {
+new Swiper('.guardian__swiper', {
   direction: 'horizontal',
   slidesPerView: 1.5,
+  // slidesPerView: 'auto',
   spaceBetween: 10,
   loop: true,
   // centeredSlides: true,
@@ -8672,36 +8691,6 @@ new Swiper('.swiper-guardian', {
 });
 
 // Карта
-
-// setTimeout(function(){
-//     var elem = document.createElement('script');
-//     elem.type = 'text/javascript';
-//     elem.src = '//api-maps.yandex.ru/2.1/?apikey=f4112ee9-ccf1-46a4-aaa2-b243dc478c03&lang=ru_RU';
-//     document.getElementsByTagName('body')[0].appendChild(elem);
-// }, 2000);
-// function getYaMap(){
-//     const myMap = new ymaps.Map("map", {
-//         center: [55.848968, 37.376054],
-//         zoom: 17
-//     });
-
-//     const mark = new ymaps.Placemark([55.848968, 37.376054], {
-//         hintContent: 'Friendly House - приют для животных',
-//     }, {
-//         iconLayout: 'default#image',
-//         iconImageHref: 'img/footer/Vector.svg',
-//         iconImageSize: [39, 59],
-//         iconImageOffset: [-20, -59]
-//     });
-//     myMap.geoObjects.add(mark);
-
-//     myMap.behaviors.disable('drag');
-
-//     myMap.controls.remove('geolocationControl');
-//     myMap.controls.remove('searchControl');
-//     myMap.controls.remove('trafficControl');
-//     myMap.controls.remove('typeSelector');				
-// };
 
 let flag = 0;
 window.addEventListener('scroll', function () {

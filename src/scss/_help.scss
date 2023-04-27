@@ -146,7 +146,7 @@
 .guardian__swiper {
     width: 100%;
     max-width: 500px;
-    height: 131px;
+    height: 160px;
 }
 
 // .guardian__slide--1 {    
@@ -164,7 +164,7 @@
 //     height: 160px;
 // }
 
-.volunteer__image {
+.volunteer{
     width: 100%;
     object-fit: cover;
     @media (max-width: 1100px) {
@@ -386,3 +386,11 @@
     }
 }
 
+.swiper__caption {
+    font-size: 18px;
+    line-height: 24px;
+    @media (max-width: 480px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+}

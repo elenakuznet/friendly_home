@@ -9,12 +9,6 @@
         top: 64px;
         left: 0;
     }
-    &__overlay {
-        position: fixed;
-        inset: 0;
-        cursor: pointer;
-        display: none;
-    }
     &__nav {
         position: relative;
         max-width: 394px;
@@ -69,6 +63,13 @@
             display: block;
         }
     }
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    cursor: pointer;
+    display: none;
 }
 
 .triangle {
