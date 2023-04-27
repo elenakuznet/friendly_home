@@ -193,8 +193,6 @@
 
 .first {
     position: relative;
-    /* max-width: 450px; */
-    // padding-left: 100px;
     margin-bottom: 50px;
     @media (max-width: 1100px) {
         margin-bottom: 30px;
@@ -209,8 +207,6 @@
 
 .second {
     position: relative;
-    /* max-width: 643px; */
-    /* padding-left: 100px; */
     margin-bottom: 50px;
     @media (max-width: 1100px) {
         margin-bottom: 30px;
@@ -219,8 +215,6 @@
 
 .third {
     position: relative;
-    /* max-width: 540px; */
-    // padding-left: 100px;
 }
 
 .item__title {
@@ -387,8 +381,10 @@
 }
 
 .swiper__caption {
+    display: block;
     font-size: 18px;
     line-height: 24px;
+    color: $color-text;
     @media (max-width: 480px) {
             font-size: 14px;
             line-height: 20px;

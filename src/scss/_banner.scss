@@ -98,21 +98,6 @@
             height: 266px;
             margin-bottom: 5px;
         }
-        // &--sara {
-        //     background-image: url(('../img/banner/sara_bg.png'));
-        // }
-        // &--boris {
-        //     background-image: url('../img/banner/boris_bg.png');
-        // }
-        // &--lui {
-        //     background-image: url('../img/banner/lui_bg.png');
-        // }
-        // &--piter {
-        //     background-image: url('../img/banner/piter_bg.png');
-        // }
-        // &--kenny {
-        //     background-image: url('../img/banner/kenny_bg.png');
-        // }
     }
     &__list {
         grid-area: four;
@@ -136,7 +121,6 @@
         justify-content: flex-start;
         align-items: center;
         gap: 20px;
-        // width: 180px;
         border: 0;
         background: transparent;
         outline: 1px solid transparent;
@@ -186,11 +170,11 @@
 }
 
 .tabs__content {
-    display: none; /* по умолчанию прячем все блоки */
+    display: none;
 }
 
 .tabs__content.active {
-    display: block; /* по умолчанию показываем нужный блок */
+    display: block;
 }
 
 .tabs__image {
@@ -201,8 +185,7 @@
     display: block;
 }
 
-
-.modal__open {
+.modal-open {
     @media (max-width: 1150px) {
         max-width: 148px;
         max-height: 126px;
