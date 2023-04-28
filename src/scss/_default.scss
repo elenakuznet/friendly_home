@@ -58,10 +58,6 @@ iframe {
     border: none;
 }
 
-/*
-Доступно скрываю элементы
-  */
-
 .visually-hidden {
     position: fixed;
     transform: scale(0);
@@ -73,19 +69,6 @@ iframe {
     margin: 0 auto;
     display: flow-root;
 }
-
-
-// h2 {
-//     font-family: "Comfortaa";
-//     font-size: 50px;
-//     font-weight: 400;
-// }
-
-// h3 {
-//     font-family: "Helvetica Neue";
-//     font-size: 30px;
-//     font-weight: 400;
-// }
 
 .section {
     padding: 45px 0;
@@ -112,7 +95,7 @@ iframe {
     }
 
     .container {
-        max-width: 940px;
+        // max-width: 940px;
     }
 
     .section__title {
@@ -130,7 +113,6 @@ iframe {
 
     .container {
         max-width: 768px;
-        // padding: 0 34px;
     }
 
     .section__title {

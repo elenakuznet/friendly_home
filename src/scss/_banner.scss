@@ -36,7 +36,6 @@
         @media (max-width: 950px) {
             max-width: 700px;
         }
-
     }
     &__text {
         font-family: 'Comfortaa';
@@ -80,6 +79,8 @@
         // justify-self: left;
         grid-area: two;
         background-color: transparent;
+        align-self: center;
+        justify-self: center;
     }
     &__image {
         width: 580px;
@@ -113,8 +114,7 @@
             flex-direction: row;
             justify-content: center;
             margin-bottom: 20px;
-        }
-        
+        }    
     }
     &__choose {
         display: flex;

@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 html {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -63,10 +61,6 @@ fieldset {
 iframe {
   border: none;
 }
-
-/*
-Доступно скрываю элементы
-  */
 
 .visually-hidden {
   position: fixed;
@@ -671,6 +665,8 @@ template {
 .banner__link {
   grid-area: two;
   background-color: transparent;
+  align-self: center;
+  justify-self: center;
 }
 
 .banner__image {
@@ -752,12 +748,10 @@ template {
 
 .tabs__content {
   display: none;
-  /* по умолчанию прячем все блоки */
 }
 
 .tabs__content.active {
   display: block;
-  /* по умолчанию показываем нужный блок */
 }
 
 .tabs__image {
@@ -1149,20 +1143,16 @@ template {
 
 .first {
   position: relative;
-  /* max-width: 450px; */
   margin-bottom: 50px;
 }
 
 .second {
   position: relative;
-  /* max-width: 643px; */
-  /* padding-left: 100px; */
   margin-bottom: 50px;
 }
 
 .third {
   position: relative;
-  /* max-width: 540px; */
 }
 
 .item__title {
@@ -1249,8 +1239,10 @@ template {
 }
 
 .swiper__caption {
+  display: block;
   font-size: 18px;
   line-height: 24px;
+  color: #282626;
 }
 
 .pets {
@@ -1759,6 +1751,65 @@ template {
 
 .modal__close:hover {
   color: #5B5656;
+}
+
+.modal-open {
+  width: 180px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 5;
+}
+
+.modal-open__image {
+  width: 111px;
+  height: 101px;
+}
+
+.modal-open__image:hover {
+  -webkit-filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+  -webkit-transition: -webkit-filter 0.2s ease-in;
+  transition: -webkit-filter 0.2s ease-in;
+  transition: filter 0.2s ease-in;
+  transition: filter 0.2s ease-in, -webkit-filter 0.2s ease-in;
+}
+
+.modal-open__image:focus {
+  -webkit-filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+  -webkit-transition: -webkit-filter 0.2s ease-in;
+  transition: -webkit-filter 0.2s ease-in;
+  transition: filter 0.2s ease-in;
+  transition: filter 0.2s ease-in, -webkit-filter 0.2s ease-in;
+}
+
+.modal-open__image:active {
+  -webkit-filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+  -webkit-transition: -webkit-filter 0.2s ease-in;
+  transition: -webkit-filter 0.2s ease-in;
+  transition: filter 0.2s ease-in;
+  transition: filter 0.2s ease-in, -webkit-filter 0.2s ease-in;
+}
+
+.modal-open__text {
+  font-weight: 550;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  color: orange;
+  max-width: 180px;
 }
 
 /**
@@ -2683,7 +2734,7 @@ swiper-container .swiper-notification {
     justify-content: flex-end;
   }
 
-  .modal__open {
+  .modal-open {
     max-width: 148px;
     max-height: 126px;
   }
@@ -2751,10 +2802,6 @@ swiper-container .swiper-notification {
   body {
     font-size: 18px;
     line-height: 26px;
-  }
-
-  .container {
-    max-width: 940px;
   }
 
   .section__title {
@@ -2899,6 +2946,16 @@ swiper-container .swiper-notification {
   .footer__logo {
     width: 300px;
     height: 37px;
+  }
+
+  .modal-open__image {
+    width: 83px;
+    height: 80px;
+  }
+
+  .modal-open__text {
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 
@@ -3411,7 +3468,7 @@ swiper-container .swiper-notification {
     flex-direction: column;
   }
 
-  .modal__open {
+  .modal-open {
     margin: 0 auto;
   }
 }
@@ -3692,7 +3749,7 @@ swiper-container .swiper-notification {
     display: none;
   }
 
-  .modal__open {
+  .modal-open {
     width: 84px;
     height: 78px;
   }
@@ -3790,5 +3847,22 @@ swiper-container .swiper-notification {
     height: 16px;
     top: 8px;
     right: 11px;
+  }
+
+  .modal-open {
+    width: 84px;
+    height: 78px;
+    gap: 4px;
+  }
+
+  .modal-open__image {
+    width: 51px;
+    height: 50px;
+  }
+
+  .modal-open__text {
+    font-size: 8px;
+    line-height: 12px;
+    max-width: 84px;
   }
 }

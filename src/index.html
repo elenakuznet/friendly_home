@@ -84,7 +84,7 @@
         <h1 class="visually-hidden">Приют "Friendly House"</h1>
         <section class="section banner">
             <div class="container">
-                <div class="sara choose">
+                <div class="choose">
                     <div class="banner__wrapper tabs">
                         <div class="banner__content tabs__content active">
                             <h2 class="banner__text"><span class="banner__text banner__text--orange">Сара ждёт,</span> когда найдётся 
@@ -108,10 +108,11 @@
                                 её человек</h2>
                         </div>
 
-
-                        <button class="banner__link button modal-open" aria-label="жми на лапку чтобы помочь">
-                            <img  src="img/banner/banner_link.svg" alt="кнопка в виде лапки" width="180" height="155">
-                        </button>
+                        <div class="banner__link button modal-open">
+                            <img class="modal-open__image" src="img/banner/paw-1.svg" alt="жми на лапку чтобы помочь">
+                            <p class="modal-open__text">Жми на лапку, чтобы помочь!</p>
+                            <!-- <img  src="img/banner/banner_link.svg" alt="кнопка в виде лапки" width="180" height="155"> -->
+                        </div>
                         <picture class="banner__image tabs__image active">
                                     <source media="(max-width: 460px)" srcset="img/banner/sara-mob.avif" type="image/avif">
                                     <source media="(max-width: 460px)" srcset="img/banner/sara-mob.webp" type="image/webp">
@@ -142,7 +143,7 @@
                         </picture>
                         <ul class="banner__list tabs__caption">
                             <li class="banner__item active">
-                                <button class="banner__choose sara__button">
+                                <button class="banner__choose">
                                     <img class="banner__img" src="img/banner/sara.png" alt="" width="80" height="80">Сара
                                 </button>
                             </li>
@@ -589,9 +590,11 @@
                         </div>
                     </li>
                 </ol>
-                <button class="help__button button modal-open" aria-label="жми на лапку чтобы помочь">
-                    <img loading="lazy" src="img/banner/banner_link.svg" alt="кнопка в виде лапки" width="180" height="155">
-                </button>
+                <div class="help__button button modal-open">
+                    <img class="modal-open__image" src="img/banner/paw-1.svg" alt="жми на лапку чтобы помочь">
+                    <p class="modal-open__text">Жми на лапку, чтобы помочь!</p>
+                    <!-- <img loading="lazy" src="img/banner/banner_link.svg" alt="кнопка в виде лапки" width="180" height="155"> -->
+                </div>
             </div>
         </section>
         <section class="pets section">
