@@ -124,6 +124,7 @@
         border: 0;
         background: transparent;
         outline: 1px solid transparent;
+        outline-offset: 5px;
         &:hover {
             outline: 1px solid $orange;
         }
@@ -141,6 +142,15 @@
     &__img {
         width: 80px;
         height: 80px;
+        &:hover {
+            filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
+        }
+        &:focus {
+            filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
+        }
+        &:active {
+            filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
+        }
         @media (max-width: 950px) {
             width: 60px;
             height: 60px;

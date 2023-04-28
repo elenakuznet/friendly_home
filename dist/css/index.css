@@ -709,6 +709,7 @@ template {
   border: 0;
   background: transparent;
   outline: 1px solid transparent;
+  outline-offset: 5px;
 }
 
 .banner__choose:hover {
@@ -723,6 +724,21 @@ template {
 .banner__img {
   width: 80px;
   height: 80px;
+}
+
+.banner__img:hover {
+  -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+.banner__img:focus {
+  -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+.banner__img:active {
+  -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
 .orange {
