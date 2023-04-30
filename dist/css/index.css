@@ -1744,7 +1744,7 @@ template {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.67);
-  padding: 340px 25px;
+  padding: 150px 25px;
   overflow-y: auto;
   cursor: pointer;
   z-index: 100;
@@ -3430,7 +3430,7 @@ swiper-container .swiper-notification {
   }
 
   .modal {
-    padding: 170px 25px;
+    padding: 140px 25px;
   }
 
   .modal__close {
