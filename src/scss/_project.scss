@@ -337,16 +337,16 @@
         }
     }
     &__item {
-        outline: 1px solid transparent;
-        &:hover {
-            outline: 1px solid $orange;
-        }
-        &:focus {
-            outline: 1px solid $orange;
-        }
-        &:active {
-            outline: 1px solid $orange;
-        }
+        // outline: 1px solid transparent;
+        // &:hover {
+        //     outline: 1px solid $orange;
+        // }
+        // &:focus {
+        //     outline: 1px solid $orange;
+        // }
+        // &:active {
+        //     outline: 1px solid $orange;
+        // }
     }
     &__image {
         width: 100%;

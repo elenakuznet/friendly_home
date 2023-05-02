@@ -696,12 +696,10 @@ template {
 }
 
 .banner__choose {
+  width: 180px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -716,29 +714,34 @@ template {
   outline: 1px solid #ff8a00;
 }
 
+.banner__choose:hover .banner__img {
+  -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
 .banner__choose:focus {
   outline: 1px solid #ff8a00;
   color: #ff8a00;
 }
 
+.banner__choose:focus .banner__img {
+  -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+.banner__choose:active {
+  outline: 1px solid #ff8a00;
+  color: #ff8a00;
+}
+
+.banner__choose:active .banner__img {
+  -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
 .banner__img {
   width: 80px;
   height: 80px;
-}
-
-.banner__img:hover {
-  -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
-  filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
-}
-
-.banner__img:focus {
-  -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
-  filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
-}
-
-.banner__img:active {
-  -webkit-filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
-  filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
 .orange {
@@ -998,18 +1001,6 @@ template {
 
 .more__item {
   outline: 1px solid transparent;
-}
-
-.more__item:hover {
-  outline: 1px solid #ff8a00;
-}
-
-.more__item:focus {
-  outline: 1px solid #ff8a00;
-}
-
-.more__item:active {
-  outline: 1px solid #ff8a00;
 }
 
 .more__image {
@@ -1744,7 +1735,7 @@ template {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.67);
-  padding: 150px 25px;
+  padding: 120px 25px;
   overflow-y: auto;
   cursor: pointer;
   z-index: 100;
@@ -2742,12 +2733,7 @@ swiper-container .swiper-notification {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
-  }
-
-  .banner__choose {
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    gap: 20px;
   }
 
   .modal-open {
@@ -3177,6 +3163,14 @@ swiper-container .swiper-notification {
 }
 
 @media (max-width: 850px) {
+  .banner__list {
+    gap: 15px;
+  }
+
+  .banner__choose {
+    width: 140px;
+  }
+
   .help__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -3430,7 +3424,7 @@ swiper-container .swiper-notification {
   }
 
   .modal {
-    padding: 140px 25px;
+    padding: 100px 25px;
   }
 
   .modal__close {
@@ -3471,13 +3465,14 @@ swiper-container .swiper-notification {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
     margin-bottom: 20px;
   }
 
   .banner__choose {
+    width: 60px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -3855,7 +3850,7 @@ swiper-container .swiper-notification {
   }
 
   .modal {
-    padding: 100px 25px;
+    padding: 60px 25px;
   }
 
   .modal__close {
