@@ -371,8 +371,7 @@
 
 .guardian__content {
     padding-left: 100px;
-    // padding-top: 22px;
-    @media (max-width: 850px) {
+    @media (max-width: 768px) {
         padding-left: 80px;
     }
     @media (max-width: 480px) {

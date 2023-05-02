@@ -51,15 +51,18 @@
         gap: 20px;
         position: relative;
         outline: 1px solid transparent;
-        &:hover {
-            outline: 1px solid $orange;
-        }
-        &:focus {
-            outline: 1px solid $orange;
-        }
-        &:active {
-            outline: 1px solid $orange;
-        }
+        // &:hover {
+        //     outline: 1px solid $orange;
+        // }
+        // &:focus {
+        //     outline: 1px solid $orange;
+        // }
+        // &:active {
+        //     outline: 1px solid $orange;
+        // }
+        // @media (max-width: 1250px) {
+        //     grid-template-columns: 240px 360px;
+        // }
 
         @media (max-width: 1150px) {
             grid-template-columns: 200px 360px;
